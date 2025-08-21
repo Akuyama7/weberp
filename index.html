@@ -1,5 +1,5 @@
 <!-- ======================================================================= -->
-<!-- FILE 1: index.html (DIPERBARUI DENGAN PATH LOKAL)                       -->
+<!-- FILE 1: index.html (DIPERBARUI DENGAN BACKGROUND ANIMASI)               -->
 <!-- ======================================================================= -->
 <!DOCTYPE html>
 <html lang="id" class="scroll-smooth">
@@ -33,7 +33,18 @@
     </script>
     
     <style>
-        .hero-bg { background-color: #f8f9ff; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23e0e7ff'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
+        .hero-bg { 
+            background-color: #f0f5ff;
+            background-image: 
+                linear-gradient(to bottom, rgba(240, 245, 255, 0.9), rgba(240, 245, 255, 1)),
+                url("data:image/svg+xml,%3Csvg viewBox='0 0 1200 800' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.02' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            background-size: auto, 200% 200%;
+            animation: moveClouds 120s linear infinite;
+        }
+        @keyframes moveClouds {
+            0% { background-position: 0% 50%, 0% 0%; }
+            100% { background-position: 0% 50%, 100% 100%; }
+        }
         .logo-grayscale { filter: grayscale(100%) opacity(50%); transition: all 0.3s ease; }
         .logo-grayscale:hover { filter: grayscale(0%) opacity(100%); }
         .interactive-card { transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
@@ -59,7 +70,7 @@
 
     <!-- ===== Header / Navbar ===== -->
     <header id="header" class="bg-white/80 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 transition-all duration-300 shadow-sm">
-        <div class="container mx-auto px-6 py-4">
+        <div class="container mx-auto px-6 py-3">
             <div class="flex justify-between items-center">
                 <a href="index.html" class="text-2xl font-bold text-indigo-600 flex items-center">
                     <svg class="w-8 h-8 mr-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -78,14 +89,14 @@
                     </svg>
                     <span class="text-gray-900">MyERP <span class="text-indigo-600">Plus</span></span>
                 </a>
-                <nav class="hidden md:flex space-x-8 items-center">
-                    <a href="#solusi" class="text-gray-600 hover:text-indigo-600 transition-colors font-medium">Solusi Industri</a>
-                    <a href="#fitur" class="text-gray-600 hover:text-indigo-600 transition-colors font-medium">Fitur</a>
-                    <a href="#blog" class="text-gray-600 hover:text-indigo-600 transition-colors font-medium">Blog</a>
-                    <a href="#harga" class="text-gray-600 hover:text-indigo-600 transition-colors font-medium">Harga</a>
-                    <a href="#kontak" class="text-gray-600 hover:text-indigo-600 transition-colors font-medium">Kontak</a>
+                <nav class="hidden md:flex items-center space-x-2 bg-gray-100 p-2 rounded-full">
+                    <a href="#solusi" class="px-4 py-2 text-gray-600 hover:text-indigo-600 hover:bg-white rounded-full transition-all duration-300 font-medium">Solusi Industri</a>
+                    <a href="#fitur" class="px-4 py-2 text-gray-600 hover:text-indigo-600 hover:bg-white rounded-full transition-all duration-300 font-medium">Fitur</a>
+                    <a href="#blog" class="px-4 py-2 text-gray-600 hover:text-indigo-600 hover:bg-white rounded-full transition-all duration-300 font-medium">Blog</a>
+                    <a href="#harga" class="px-4 py-2 text-gray-600 hover:text-indigo-600 hover:bg-white rounded-full transition-all duration-300 font-medium">Harga</a>
+                    <a href="#kontak" class="px-4 py-2 text-gray-600 hover:text-indigo-600 hover:bg-white rounded-full transition-all duration-300 font-medium">Kontak</a>
                 </nav>
-                <a href="#kontak" class="hidden md:inline-block bg-indigo-600 text-white px-6 py-2.5 rounded-lg font-semibold hover:bg-indigo-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-indigo-200">
+                <a href="#kontak" class="hidden md:inline-block bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-indigo-200 border-b-4 border-indigo-800 active:border-b-0">
                     Request Demo
                 </a>
                 <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-gray-800 hover:bg-gray-100 focus:outline-none">
@@ -180,11 +191,11 @@
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-16">
                     <div class="bg-gray-50 text-center p-6 rounded-xl interactive-card" data-aos="fade-up"><img src="akun.png" alt="Ikon 3D Akuntansi" class="w-24 h-24 mx-auto mb-4 card-icon-image"><h3 class="text-lg font-bold text-gray-800">Buku Besar & Akuntansi</h3></div>
                     <div class="bg-gray-50 text-center p-6 rounded-xl interactive-card" data-aos="fade-up" data-aos-delay="50"><img src="piutang.png" alt="Ikon 3D Piutang" class="w-24 h-24 mx-auto mb-4 card-icon-image"><h3 class="text-lg font-bold text-gray-800">Manajemen Piutang</h3></div>
-                    <div class="bg-gray-50 text-center p-6 rounded-xl interactive-card" data-aos="fade-up" data-aos-delay="100"><img src="hutang.png" alt="Ikon 3D Utang" class="w-24 h-24 mx-auto mb-4 card-icon-image"><h3 class="text-lg font-bold text-gray-800">Manajemen Utang</h3></div>
+                    <div class="bg-gray-50 text-center p-6 rounded-xl interactive-card" data-aos="fade-up" data-aos-delay="100"><img src="utang.png" alt="Ikon 3D Utang" class="w-24 h-24 mx-auto mb-4 card-icon-image"><h3 class="text-lg font-bold text-gray-800">Manajemen Utang</h3></div>
                     <div class="bg-gray-50 text-center p-6 rounded-xl interactive-card" data-aos="fade-up" data-aos-delay="150"><img src="kasbank.png" alt="Ikon 3D Kas & Bank" class="w-24 h-24 mx-auto mb-4 card-icon-image"><h3 class="text-lg font-bold text-gray-800">Manajemen Kas & Bank</h3></div>
                     <div class="bg-gray-50 text-center p-6 rounded-xl interactive-card" data-aos="fade-up"><img src="inventaris.png" alt="Ikon 3D Inventaris" class="w-24 h-24 mx-auto mb-4 card-icon-image"><h3 class="text-lg font-bold text-gray-800">Kontrol Inventaris</h3></div>
                     <div class="bg-gray-50 text-center p-6 rounded-xl interactive-card" data-aos="fade-up" data-aos-delay="50"><img src="pembelian.png" alt="Ikon 3D Pembelian" class="w-24 h-24 mx-auto mb-4 card-icon-image"><h3 class="text-lg font-bold text-gray-800">Manajemen Pembelian</h3></div>
-                    <div class="bg-gray-50 text-center p-6 rounded-xl interactive-card" data-aos="fade-up" data-aos-delay="100"><img src="panjualan.png" alt="Ikon 3D Penjualan" class="w-24 h-24 mx-auto mb-4 card-icon-image"><h3 class="text-lg font-bold text-gray-800">Manajemen Penjualan</h3></div>
+                    <div class="bg-gray-50 text-center p-6 rounded-xl interactive-card" data-aos="fade-up" data-aos-delay="100"><img src="penjualan.png" alt="Ikon 3D Penjualan" class="w-24 h-24 mx-auto mb-4 card-icon-image"><h3 class="text-lg font-bold text-gray-800">Manajemen Penjualan</h3></div>
                     <div class="bg-gray-50 text-center p-6 rounded-xl interactive-card" data-aos="fade-up" data-aos-delay="150"><img src="manufaktur.png" alt="Ikon 3D Manufaktur" class="w-24 h-24 mx-auto mb-4 card-icon-image"><h3 class="text-lg font-bold text-gray-800">Manufaktur & Produksi</h3></div>
                     <div class="bg-gray-50 text-center p-6 rounded-xl interactive-card" data-aos="fade-up"><img src="aset.png" alt="Ikon 3D Aset Tetap" class="w-24 h-24 mx-auto mb-4 card-icon-image"><h3 class="text-lg font-bold text-gray-800">Manajemen Aset Tetap</h3></div>
                     <div class="bg-gray-50 text-center p-6 rounded-xl interactive-card" data-aos="fade-up" data-aos-delay="150"><img src="keamanan.png" alt="Ikon 3D Keamanan" class="w-24 h-24 mx-auto mb-4 card-icon-image"><h3 class="text-lg font-bold text-gray-800">Keamanan Sistem</h3></div>
@@ -392,4 +403,3 @@
 
 </body>
 </html>
-

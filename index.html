@@ -1,5 +1,5 @@
 <!-- ======================================================================= -->
-<!-- FILE 1: index.html (DIPERBARUI DENGAN TEMA BIRU)                        -->
+<!-- FILE 1: index.html (DIPERBARUI DENGAN TEMPLATE BARU)                    -->
 <!-- ======================================================================= -->
 <!DOCTYPE html>
 <html lang="id" class="scroll-smooth">
@@ -26,8 +26,8 @@
                 extend: {
                     fontFamily: { 'sans': ['Inter', 'sans-serif'], },
                     colors: {
-                        'primary': '#2563EB', // Blue-600
-                        'primary-dark': '#1D4ED8', // Blue-700
+                        'primary': '#DC2626', // Red-600
+                        'primary-dark': '#B91C1C', // Red-700
                         'secondary': '#111827', // Gray-900
                         'light': '#F9FAFB', // Gray-50
                     }
@@ -70,6 +70,7 @@
         .scroll-to-top { opacity: 0; visibility: hidden; transform: translateY(20px); }
         .scroll-to-top.visible { opacity: 1; visibility: visible; transform: translateY(0); }
         .whatsapp-btn { bottom: 90px; }
+        .contact-us-btn { bottom: 160px; }
         [x-cloak] { display: none !important; }
     </style>
 </head>
@@ -100,7 +101,7 @@
             <div class="flex justify-between items-center">
                 <a href="index.html" class="text-2xl font-bold text-secondary flex items-center">
                     <svg class="w-9 h-9 mr-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 2L4 6.5V15.5L12 20L20 15.5V6.5L12 2Z" fill="#2563EB"/>
+                        <path d="M12 2L4 6.5V15.5L12 20L20 15.5V6.5L12 2Z" fill="#DC2626"/>
                         <path d="M12 20V11L4 6.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M12 11L20 6.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M16.5 9.25L7.5 14.25" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -137,24 +138,28 @@
         <!-- ===== Hero Section ===== -->
         <section id="beranda" class="relative h-screen flex items-center justify-center text-center hero-bg">
             <video autoplay muted loop id="bg-video">
-                <source src="ERP.mp4" type="video/mp4">
+                <source src="video-background.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
             <div class="hero-overlay"></div>
             <div class="relative z-10 container mx-auto px-6" data-aos="fade-up">
-                <h1 class="text-5xl md:text-7xl font-black text-white uppercase tracking-wider">
-                    TRANSFORMASIKAN BISNIS ANDA
-                </h1>
-                <p class="mt-6 text-lg md:text-xl text-gray-300 max-w-2xl mx-auto">
-                    "ERP Pintar untuk Efisiensi Maksimal"
-                </p>
-                <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <a href="#kontak" class="w-full sm:w-auto bg-primary text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-dark transition-all duration-300 transform hover:scale-105">
-                        Coba Gratis
-                    </a>
-                    <a href="#fitur" class="w-full sm:w-auto bg-gray-700/50 text-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-600/70 transition-all duration-300 transform hover:scale-105">
-                        Hubungi Kami
-                    </a>
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="text-center lg:text-left">
+                        <h1 class="text-5xl md:text-7xl font-black text-white uppercase tracking-wider">
+                            TRANSFORMASIKAN BISNIS ANDA
+                        </h1>
+                        <p class="mt-6 text-lg md:text-xl text-gray-300 max-w-2xl mx-auto lg:mx-0">
+                            "ERP Pintar untuk Efisiensi Maksimal"
+                        </p>
+                        <div class="mt-10">
+                            <a href="#kontak" class="w-full sm:w-auto bg-primary text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-dark transition-all duration-300 transform hover:scale-105">
+                                Coba Gratis
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hidden lg:block">
+                        <!-- Placeholder for right side content -->
+                    </div>
                 </div>
             </div>
         </section>
@@ -165,12 +170,24 @@
                 <h2 class="text-center text-3xl font-bold text-white mb-4" data-aos="fade-up">Dipercaya oleh 1.000+ Klien</h2>
                 <div class="w-24 h-1 bg-primary mx-auto mb-12" data-aos="fade-up"></div>
                 <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center" data-aos="fade-up" data-aos-delay="100">
-                    <img src="logo1.png" alt="Logo Klien 1" class="h-10 mx-auto logo-grayscale invert">
-                    <img src="logo2.png" alt="Logo Klien 2" class="h-10 mx-auto logo-grayscale invert">
-                    <img src="logo3.png" alt="Logo Klien 3" class="h-10 mx-auto logo-grayscale invert">
-                    <img src="logo4.png" alt="Logo Klien 4" class="h-10 mx-auto logo-grayscale invert">
-                    <img src="logo5.png" alt="Logo Klien 5" class="h-10 mx-auto logo-grayscale invert">
-                    <img src="logo6.png" alt="Logo Klien 6" class="h-10 mx-auto logo-grayscale invert">
+                    <div class="flex justify-center items-center h-16">
+                        <img src="logo1.png" alt="Logo Klien 1" class="max-h-10 max-w-full logo-grayscale invert">
+                    </div>
+                    <div class="flex justify-center items-center h-16">
+                        <img src="logo2.png" alt="Logo Klien 2" class="max-h-10 max-w-full logo-grayscale invert">
+                    </div>
+                    <div class="flex justify-center items-center h-16">
+                        <img src="logo3.png" alt="Logo Klien 3" class="max-h-10 max-w-full logo-grayscale invert">
+                    </div>
+                    <div class="flex justify-center items-center h-16">
+                        <img src="logo4.png" alt="Logo Klien 4" class="max-h-10 max-w-full logo-grayscale invert">
+                    </div>
+                    <div class="flex justify-center items-center h-16">
+                        <img src="logo5.png" alt="Logo Klien 5" class="max-h-10 max-w-full logo-grayscale invert">
+                    </div>
+                    <div class="flex justify-center items-center h-16">
+                        <img src="logo6.png" alt="Logo Klien 6" class="max-h-10 max-w-full logo-grayscale invert">
+                    </div>
                 </div>
             </div>
         </section>
@@ -183,12 +200,12 @@
                     <p class="mt-4 text-lg text-gray-600">MyERP Plus dirancang fleksibel untuk memenuhi kebutuhan unik berbagai sektor bisnis, membantu Anda meraih keunggulan kompetitif.</p>
                 </div>
                 <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 mt-16">
-                    <div class="text-center p-4" data-aos="fade-up"><div class="bg-blue-100 text-primary rounded-lg w-16 h-16 flex items-center justify-center mx-auto mb-3"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/></svg></div><h3 class="font-bold text-secondary">Retail</h3></div>
-                    <div class="text-center p-4" data-aos="fade-up" data-aos-delay="50"><div class="bg-blue-100 text-primary rounded-lg w-16 h-16 flex items-center justify-center mx-auto mb-3"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg></div><h3 class="font-bold text-secondary">Manufaktur</h3></div>
-                    <div class="text-center p-4" data-aos="fade-up" data-aos-delay="100"><div class="bg-blue-100 text-primary rounded-lg w-16 h-16 flex items-center justify-center mx-auto mb-3"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10l2-2h8a1 1 0 001-1z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 11V9a2 2 0 00-2-2h-4l2 4h2a2 2 0 012 2v2a2 2 0 002 2z"/></svg></div><h3 class="font-bold text-secondary">Distribusi</h3></div>
-                    <div class="text-center p-4" data-aos="fade-up" data-aos-delay="150"><div class="bg-blue-100 text-primary rounded-lg w-16 h-16 flex items-center justify-center mx-auto mb-3"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg></div><h3 class="font-bold text-secondary">Properti</h3></div>
-                    <div class="text-center p-4" data-aos="fade-up" data-aos-delay="200"><div class="bg-blue-100 text-primary rounded-lg w-16 h-16 flex items-center justify-center mx-auto mb-3"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547a2 2 0 01-1.022.547l-2.387.477a6 6 0 01-3.86-.517l-.318-.158a6 6 0 00-3.86-.517L.05 15.21a2 2 0 00-1.806.547z"/></svg></div><h3 class="font-bold text-secondary">Konstruksi</h3></div>
-                    <div class="text-center p-4" data-aos="fade-up" data-aos-delay="250"><div class="bg-blue-100 text-primary rounded-lg w-16 h-16 flex items-center justify-center mx-auto mb-3"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/></svg></div><h3 class="font-bold text-secondary">Jasa</h3></div>
+                    <div class="text-center p-4" data-aos="fade-up"><div class="bg-red-100 text-primary rounded-lg w-16 h-16 flex items-center justify-center mx-auto mb-3"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/></svg></div><h3 class="font-bold text-secondary">Retail</h3></div>
+                    <div class="text-center p-4" data-aos="fade-up" data-aos-delay="50"><div class="bg-red-100 text-primary rounded-lg w-16 h-16 flex items-center justify-center mx-auto mb-3"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg></div><h3 class="font-bold text-secondary">Manufaktur</h3></div>
+                    <div class="text-center p-4" data-aos="fade-up" data-aos-delay="100"><div class="bg-red-100 text-primary rounded-lg w-16 h-16 flex items-center justify-center mx-auto mb-3"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10l2-2h8a1 1 0 001-1z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 11V9a2 2 0 00-2-2h-4l2 4h2a2 2 0 012 2v2a2 2 0 002 2z"/></svg></div><h3 class="font-bold text-secondary">Distribusi</h3></div>
+                    <div class="text-center p-4" data-aos="fade-up" data-aos-delay="150"><div class="bg-red-100 text-primary rounded-lg w-16 h-16 flex items-center justify-center mx-auto mb-3"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg></div><h3 class="font-bold text-secondary">Properti</h3></div>
+                    <div class="text-center p-4" data-aos="fade-up" data-aos-delay="200"><div class="bg-red-100 text-primary rounded-lg w-16 h-16 flex items-center justify-center mx-auto mb-3"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547a2 2 0 01-1.022.547l-2.387.477a6 6 0 01-3.86-.517l-.318-.158a6 6 0 00-3.86-.517L.05 15.21a2 2 0 00-1.806.547z"/></svg></div><h3 class="font-bold text-secondary">Konstruksi</h3></div>
+                    <div class="text-center p-4" data-aos="fade-up" data-aos-delay="250"><div class="bg-red-100 text-primary rounded-lg w-16 h-16 flex items-center justify-center mx-auto mb-3"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/></svg></div><h3 class="font-bold text-secondary">Jasa</h3></div>
                 </div>
             </div>
         </section>
@@ -228,12 +245,12 @@
                     <p class="mt-4 text-lg text-gray-600">Setiap modul dirancang untuk bekerja secara sinergis, memberikan Anda pandangan 360 derajat terhadap seluruh operasi bisnis.</p>
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
-                    <div class="bg-white text-center p-8 rounded-xl feature-card" data-aos="fade-up"><div class="bg-blue-100 text-primary rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-5 shadow-lg"><svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg></div><h3 class="text-xl font-bold text-secondary">Finance & Accounting</h3></div>
-                    <div class="bg-white text-center p-8 rounded-xl feature-card" data-aos="fade-up" data-aos-delay="100"><div class="bg-blue-100 text-primary rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-5 shadow-lg"><svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg></div><h3 class="text-xl font-bold text-secondary">Purchasing</h3></div>
-                    <div class="bg-white text-center p-8 rounded-xl feature-card" data-aos="fade-up" data-aos-delay="200"><div class="bg-blue-100 text-primary rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-5 shadow-lg"><svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg></div><h3 class="text-xl font-bold text-secondary">Sales & Distribution</h3></div>
-                    <div class="bg-white text-center p-8 rounded-xl feature-card" data-aos="fade-up"><div class="bg-blue-100 text-primary rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-5 shadow-lg"><svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg></div><h3 class="text-xl font-bold text-secondary">Production</h3></div>
-                    <div class="bg-white text-center p-8 rounded-xl feature-card" data-aos="fade-up" data-aos-delay="100"><div class="bg-blue-100 text-primary rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-5 shadow-lg"><svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"></path></svg></div><h3 class="text-xl font-bold text-secondary">Warehouse Inventory</h3></div>
-                    <div class="bg-white text-center p-8 rounded-xl feature-card" data-aos="fade-up" data-aos-delay="200"><div class="bg-blue-100 text-primary rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-5 shadow-lg"><svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"></path></svg></div><h3 class="text-xl font-bold text-secondary">Fixed Asset Management</h3></div>
+                    <div class="bg-white text-center p-8 rounded-xl feature-card" data-aos="fade-up"><div class="bg-red-100 text-primary rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-5 shadow-lg"><svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg></div><h3 class="text-xl font-bold text-secondary">Finance & Accounting</h3></div>
+                    <div class="bg-white text-center p-8 rounded-xl feature-card" data-aos="fade-up" data-aos-delay="100"><div class="bg-red-100 text-primary rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-5 shadow-lg"><svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg></div><h3 class="text-xl font-bold text-secondary">Purchasing</h3></div>
+                    <div class="bg-white text-center p-8 rounded-xl feature-card" data-aos="fade-up" data-aos-delay="200"><div class="bg-red-100 text-primary rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-5 shadow-lg"><svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg></div><h3 class="text-xl font-bold text-secondary">Sales & Distribution</h3></div>
+                    <div class="bg-white text-center p-8 rounded-xl feature-card" data-aos="fade-up"><div class="bg-red-100 text-primary rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-5 shadow-lg"><svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg></div><h3 class="text-xl font-bold text-secondary">Production</h3></div>
+                    <div class="bg-white text-center p-8 rounded-xl feature-card" data-aos="fade-up" data-aos-delay="100"><div class="bg-red-100 text-primary rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-5 shadow-lg"><svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"></path></svg></div><h3 class="text-xl font-bold text-secondary">Warehouse Inventory</h3></div>
+                    <div class="bg-white text-center p-8 rounded-xl feature-card" data-aos="fade-up" data-aos-delay="200"><div class="bg-red-100 text-primary rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-5 shadow-lg"><svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"></path></svg></div><h3 class="text-xl font-bold text-secondary">Fixed Asset Management</h3></div>
                 </div>
             </div>
         </section>
@@ -250,7 +267,7 @@
                     <div x-data="{ open: false }" class="border border-gray-200 rounded-xl p-8 flex flex-col bg-white" data-aos="fade-up">
                         <h3 class="text-2xl font-semibold text-secondary">Essentials</h3>
                         <p class="text-gray-500 mt-1">Tingkatkan visibilitas keuangan dengan solusi manajemen keuangan digital.</p>
-                        <div class="bg-blue-50 border border-blue-200 rounded-lg p-4 mt-6 text-sm">
+                        <div class="bg-red-50 border border-red-200 rounded-lg p-4 mt-6 text-sm">
                             <p class="font-bold text-secondary mb-2">Bisnis dengan kebutuhan:</p>
                             <ul class="list-disc list-inside text-gray-600 space-y-1">
                                 <li>Pencatatan keuangan digital</li>
@@ -260,7 +277,7 @@
                         </div>
                         <p class="text-4xl font-bold text-secondary mt-6">Rp 359,100<span class="text-lg font-normal text-gray-500">/bulan</span></p>
                         <p class="text-sm text-gray-500">*dibayar per tahun</p>
-                        <a href="https://wa.me/6281315842172" target="_blank" class="mt-6 block w-full text-center bg-blue-600 text-white font-semibold py-3 rounded-lg hover:bg-blue-700 transition-colors">WhatsApp Sales</a>
+                        <a href="https://wa.me/6281315842172" target="_blank" class="mt-6 block w-full text-center bg-primary text-white font-semibold py-3 rounded-lg hover:bg-primary-dark transition-colors">WhatsApp Sales</a>
                         <button @click="open = !open" class="mt-4 block w-full text-center bg-white border border-gray-300 text-gray-700 font-semibold py-3 rounded-lg hover:bg-gray-50 transition-colors">
                             Fitur utama paket Essentials
                             <svg class="w-5 h-5 inline-block transition-transform" :class="{'transform rotate-180': open}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
@@ -283,7 +300,7 @@
                             <span class="bg-primary text-white text-xs font-bold px-3 py-1 rounded-full">PALING POPULER</span>
                         </div>
                         <p class="text-gray-500 mt-1">Tingkatkan profitabilitas bisnis dengan kelola operasional yang kompleks.</p>
-                        <div class="bg-blue-50 border border-blue-200 rounded-lg p-4 mt-6 text-sm">
+                        <div class="bg-red-50 border border-red-200 rounded-lg p-4 mt-6 text-sm">
                             <p class="font-bold text-secondary mb-2">Bisnis dengan kebutuhan:</p>
                             <ul class="list-disc list-inside text-gray-600 space-y-1">
                                 <li>Transaksi multinasional & fleksibel</li>
@@ -293,7 +310,7 @@
                         </div>
                         <p class="text-4xl font-bold text-secondary mt-6">Rp 809,100<span class="text-lg font-normal text-gray-500">/bulan</span></p>
                         <p class="text-sm text-gray-500">*dibayar per tahun</p>
-                        <a href="https://wa.me/6281315842172" target="_blank" class="mt-6 block w-full text-center bg-blue-600 text-white font-semibold py-3 rounded-lg hover:bg-blue-700 transition-colors">WhatsApp Sales</a>
+                        <a href="https://wa.me/6281315842172" target="_blank" class="mt-6 block w-full text-center bg-primary text-white font-semibold py-3 rounded-lg hover:bg-primary-dark transition-colors">WhatsApp Sales</a>
                         <button @click="open = !open" class="mt-4 block w-full text-center bg-white border border-gray-300 text-gray-700 font-semibold py-3 rounded-lg hover:bg-gray-50 transition-colors">
                             Fitur utama paket Plus
                             <svg class="w-5 h-5 inline-block transition-transform" :class="{'transform rotate-180': open}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
@@ -313,7 +330,7 @@
                     <div x-data="{ open: false }" class="border border-gray-200 rounded-xl p-8 flex flex-col bg-white" data-aos="fade-up" data-aos-delay="200">
                         <h3 class="text-2xl font-semibold text-secondary">MyERP Plus</h3>
                         <p class="text-gray-500 mt-1">Capai operasional optimal dan dapatkan insight bisnis berharga.</p>
-                        <div class="bg-blue-50 border border-blue-200 rounded-lg p-4 mt-6 text-sm">
+                        <div class="bg-red-50 border border-red-200 rounded-lg p-4 mt-6 text-sm">
                             <p class="font-bold text-secondary mb-2">Bisnis dengan kebutuhan:</p>
                             <ul class="list-disc list-inside text-gray-600 space-y-1">
                                 <li>Manajemen produksi yang advanced</li>
@@ -323,7 +340,7 @@
                         </div>
                         <p class="text-4xl font-bold text-secondary mt-6">Diskusi dengan kami</p>
                         <p class="text-sm text-gray-500">&nbsp;</p>
-                        <a href="https://wa.me/6281315842172" target="_blank" class="mt-6 block w-full text-center bg-blue-600 text-white font-semibold py-3 rounded-lg hover:bg-blue-700 transition-colors">WhatsApp Sales</a>
+                        <a href="https://wa.me/6281315842172" target="_blank" class="mt-6 block w-full text-center bg-primary text-white font-semibold py-3 rounded-lg hover:bg-primary-dark transition-colors">WhatsApp Sales</a>
                         <button @click="open = !open" class="mt-4 block w-full text-center bg-white border border-gray-300 text-gray-700 font-semibold py-3 rounded-lg hover:bg-gray-50 transition-colors">
                             Fitur utama paket MyERP Plus
                             <svg class="w-5 h-5 inline-block transition-transform" :class="{'transform rotate-180': open}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
@@ -492,4 +509,3 @@
 
 </body>
 </html>
-

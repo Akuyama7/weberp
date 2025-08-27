@@ -1,5 +1,5 @@
 <!-- ======================================================================= -->
-<!-- FILE 1: index.html (DIPERBARUI DENGAN TEMPLATE BARU)                    -->
+<!-- FILE 1: index.html (DIPERBARUI DENGAN BAGIAN KLIEN BARU)                -->
 <!-- ======================================================================= -->
 <!DOCTYPE html>
 <html lang="id" class="scroll-smooth">
@@ -62,8 +62,13 @@
             background-color: rgba(17, 24, 39, 0.6);
             background-image: linear-gradient(to top, rgba(17, 24, 39, 0.8), transparent 50%);
         }
-        .logo-grayscale { filter: grayscale(100%) opacity(60%); transition: all 0.3s ease; }
-        .logo-grayscale:hover { filter: grayscale(0%) opacity(100%); }
+        .logo-grayscale { 
+            filter: grayscale(100%) brightness(1.5);
+            transition: all 0.3s ease;
+        }
+        .logo-grayscale:hover { 
+            filter: grayscale(0%) brightness(1);
+        }
         .feature-card { transition: all 0.3s ease; }
         .feature-card:hover { transform: translateY(-8px); box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1); }
         .floating-btn { position: fixed; bottom: 20px; right: 20px; transition: all 0.3s ease; z-index: 40; }
@@ -509,4 +514,3 @@
 
 </body>
 </html>
-

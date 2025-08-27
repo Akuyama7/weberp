@@ -1,5 +1,5 @@
 <!-- ======================================================================= -->
-<!-- FILE 1: index.html (DIPERBARUI DENGAN BAGIAN KLIEN BARU)                -->
+<!-- FILE 1: index.html (DIPERBARUI DENGAN TEMPLATE BARU)                    -->
 <!-- ======================================================================= -->
 <!DOCTYPE html>
 <html lang="id" class="scroll-smooth">
@@ -117,6 +117,7 @@
                     <a href="#solusi" class="text-gray-600 hover:text-primary transition-colors font-semibold">Solusi Industri</a>
                     <a href="#fitur" class="text-gray-600 hover:text-primary transition-colors font-semibold">Fitur</a>
                     <a href="#harga" class="text-gray-600 hover:text-primary transition-colors font-semibold">Harga</a>
+                    <a href="#faq" class="text-gray-600 hover:text-primary transition-colors font-semibold">FAQ</a>
                     <a href="#blog" class="text-gray-600 hover:text-primary transition-colors font-semibold">Blog</a>
                 </nav>
                 <a href="#kontak" class="hidden lg:inline-block bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-dark transition-all duration-300 transform hover:scale-105">
@@ -132,6 +133,7 @@
             <a href="#solusi" class="block py-2 text-gray-600 hover:text-primary">Solusi Industri</a>
             <a href="#fitur" class="block py-2 text-gray-600 hover:text-primary">Fitur</a>
             <a href="#harga" class="block py-2 text-gray-600 hover:text-primary">Harga</a>
+            <a href="#faq" class="block py-2 text-gray-600 hover:text-primary">FAQ</a>
             <a href="#blog" class="block py-2 text-gray-600 hover:text-primary">Blog</a>
             <a href="#kontak" class="block bg-primary text-white text-center mt-2 px-5 py-3 rounded-lg font-semibold hover:bg-primary-dark">
                 Coba Gratis
@@ -143,7 +145,7 @@
         <!-- ===== Hero Section ===== -->
         <section id="beranda" class="relative h-screen flex items-center justify-center text-center hero-bg">
             <video autoplay muted loop id="bg-video">
-                <source src="ERP.mp4" type="video/mp4">
+                <source src="video-background.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
             <div class="hero-overlay"></div>
@@ -151,7 +153,7 @@
                 <div class="grid lg:grid-cols-2 gap-12 items-center">
                     <div class="text-center lg:text-left">
                         <h1 class="text-5xl md:text-7xl font-black text-white uppercase tracking-wider">
-                            TRANSFORMASIKAN BISNIS ANDA
+                            <span class="text-primary">TRANSFORMASIKAN</span> BISNIS ANDA
                         </h1>
                         <p class="mt-6 text-lg md:text-xl text-gray-300 max-w-2xl mx-auto lg:mx-0">
                             "ERP Pintar untuk Efisiensi Maksimal"
@@ -359,6 +361,131 @@
                                 <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Custom dashboard</li>
                                 <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>5 user & multi-gudang</li>
                             </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== FAQ Section ===== -->
+        <section id="faq" class="py-24 bg-light">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto" data-aos="fade-up">
+                    <h2 class="text-4xl md:text-5xl font-bold text-secondary">Frequently Asked Questions (FAQ)</h2>
+                    <p class="mt-4 text-lg text-gray-600">Temukan jawaban untuk pertanyaan yang paling sering diajukan tentang MyERP Plus.</p>
+                </div>
+                <div class="max-w-4xl mx-auto mt-16 space-y-4" x-data="{ active: 1 }">
+                    <!-- FAQ Item 1 -->
+                    <div class="border border-gray-200 rounded-lg" data-aos="fade-up">
+                        <button @click="active = active === 1 ? null : 1" class="w-full flex items-center justify-between p-6 text-left">
+                            <span class="text-lg font-semibold text-secondary">Apa itu MyERP Plus?</span>
+                            <svg class="w-6 h-6 transition-transform" :class="{'transform rotate-180': active === 1}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div x-cloak x-show="active === 1" x-transition class="p-6 pt-0 text-gray-600">
+                            <p>MyERP Plus adalah software Enterprise Resource Planning (ERP) yang dirancang untuk membantu perusahaan dalam mengelola proses bisnis secara terintegrasi, mulai dari keuangan, penjualan, pembelian, stok, produksi, hingga Fix Asset.</p>
+                        </div>
+                    </div>
+                    <!-- FAQ Item 2 -->
+                    <div class="border border-gray-200 rounded-lg" data-aos="fade-up">
+                        <button @click="active = active === 2 ? null : 2" class="w-full flex items-center justify-between p-6 text-left">
+                            <span class="text-lg font-semibold text-secondary">Siapa saja yang cocok menggunakan MyERP Plus?</span>
+                            <svg class="w-6 h-6 transition-transform" :class="{'transform rotate-180': active === 2}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div x-cloak x-show="active === 2" x-transition class="p-6 pt-0 text-gray-600">
+                            <p>MyERP Plus cocok digunakan oleh berbagai jenis usaha, mulai dari UMKM, perusahaan distribusi, retail, manufaktur, jasa, hingga rumah sakit yang membutuhkan sistem terintegrasi untuk mengelola operasional bisnis.</p>
+                        </div>
+                    </div>
+                    <!-- FAQ Item 3 -->
+                    <div class="border border-gray-200 rounded-lg" data-aos="fade-up">
+                        <button @click="active = active === 3 ? null : 3" class="w-full flex items-center justify-between p-6 text-left">
+                            <span class="text-lg font-semibold text-secondary">Apa keunggulan MyERP Plus dibanding software lain?</span>
+                            <svg class="w-6 h-6 transition-transform" :class="{'transform rotate-180': active === 3}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div x-cloak x-show="active === 3" x-transition class="p-6 pt-0 text-gray-600">
+                            <ul class="list-disc list-inside space-y-2">
+                                <li><strong>All-in-One:</strong> Semua modul penting bisnis dalam satu sistem.</li>
+                                <li><strong>Cloud & On-Premise:</strong> Bisa diakses online maupun dipasang di server perusahaan.</li>
+                                <li><strong>User-Friendly:</strong> Tampilan mudah digunakan, bahkan oleh pengguna baru.</li>
+                                <li><strong>Customizable:</strong> Fitur bisa disesuaikan dengan kebutuhan bisnis.</li>
+                                <li><strong>Laporan Real-Time:</strong> Data bisnis dapat dipantau secara langsung kapanpun.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- FAQ Item 4 -->
+                    <div class="border border-gray-200 rounded-lg" data-aos="fade-up">
+                        <button @click="active = active === 4 ? null : 4" class="w-full flex items-center justify-between p-6 text-left">
+                            <span class="text-lg font-semibold text-secondary">Modul apa saja yang tersedia di MyERP Plus?</span>
+                            <svg class="w-6 h-6 transition-transform" :class="{'transform rotate-180': active === 4}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div x-cloak x-show="active === 4" x-transition class="p-6 pt-0 text-gray-600">
+                            <p>Beberapa modul utama yang tersedia antara lain:</p>
+                            <ul class="list-disc list-inside space-y-2 mt-2">
+                                <li>Finance & Accounting</li>
+                                <li>Inventory & Warehouse Management</li>
+                                <li>Sales & Distribution</li>
+                                <li>Purchasing</li>
+                                <li>Manufacturing / Production</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- FAQ Item 5 -->
+                    <div class="border border-gray-200 rounded-lg" data-aos="fade-up">
+                        <button @click="active = active === 5 ? null : 5" class="w-full flex items-center justify-between p-6 text-left">
+                            <span class="text-lg font-semibold text-secondary">Apakah data di MyERP Plus aman?</span>
+                            <svg class="w-6 h-6 transition-transform" :class="{'transform rotate-180': active === 5}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div x-cloak x-show="active === 5" x-transition class="p-6 pt-0 text-gray-600">
+                            <p>Ya. MyERP Plus menggunakan sistem keamanan berlapis dengan enkripsi data serta role-based access sehingga hanya pengguna yang berwenang yang dapat mengakses data tertentu.</p>
+                        </div>
+                    </div>
+                    <!-- FAQ Item 6 -->
+                    <div class="border border-gray-200 rounded-lg" data-aos="fade-up">
+                        <button @click="active = active === 6 ? null : 6" class="w-full flex items-center justify-between p-6 text-left">
+                            <span class="text-lg font-semibold text-secondary">Apakah MyERP Plus bisa diakses dari HP?</span>
+                            <svg class="w-6 h-6 transition-transform" :class="{'transform rotate-180': active === 6}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div x-cloak x-show="active === 6" x-transition class="p-6 pt-0 text-gray-600">
+                            <p>Bisa. MyERP Plus berbasis web dan mobile friendly, sehingga dapat diakses melalui PC, laptop, tablet, maupun smartphone.</p>
+                        </div>
+                    </div>
+                    <!-- FAQ Item 7 -->
+                    <div class="border border-gray-200 rounded-lg" data-aos="fade-up">
+                        <button @click="active = active === 7 ? null : 7" class="w-full flex items-center justify-between p-6 text-left">
+                            <span class="text-lg font-semibold text-secondary">Bagaimana cara implementasi MyERP Plus di perusahaan saya?</span>
+                            <svg class="w-6 h-6 transition-transform" :class="{'transform rotate-180': active === 7}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div x-cloak x-show="active === 7" x-transition class="p-6 pt-0 text-gray-600">
+                            <p>Tim kami akan membantu mulai dari analisis kebutuhan, instalasi, migrasi data, pelatihan pengguna, hingga support purna jual untuk memastikan implementasi berjalan lancar.</p>
+                        </div>
+                    </div>
+                    <!-- FAQ Item 8 -->
+                    <div class="border border-gray-200 rounded-lg" data-aos="fade-up">
+                        <button @click="active = active === 8 ? null : 8" class="w-full flex items-center justify-between p-6 text-left">
+                            <span class="text-lg font-semibold text-secondary">Berapa biaya penggunaan MyERP Plus?</span>
+                            <svg class="w-6 h-6 transition-transform" :class="{'transform rotate-180': active === 8}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div x-cloak x-show="active === 8" x-transition class="p-6 pt-0 text-gray-600">
+                            <p>Biaya tergantung pada jumlah pengguna (user), modul yang dipilih, serta model penggunaan (cloud atau on-premise). Silakan hubungi tim sales kami untuk mendapatkan penawaran harga sesuai kebutuhan.</p>
+                        </div>
+                    </div>
+                    <!-- FAQ Item 9 -->
+                    <div class="border border-gray-200 rounded-lg" data-aos="fade-up">
+                        <button @click="active = active === 9 ? null : 9" class="w-full flex items-center justify-between p-6 text-left">
+                            <span class="text-lg font-semibold text-secondary">Apakah ada layanan support dan training?</span>
+                            <svg class="w-6 h-6 transition-transform" :class="{'transform rotate-180': active === 9}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div x-cloak x-show="active === 9" x-transition class="p-6 pt-0 text-gray-600">
+                            <p>Ya, kami menyediakan support 24/7 melalui chat, email, dan telepon. Selain itu, kami juga memberikan training langsung maupun online untuk memastikan tim Anda bisa menggunakan sistem dengan maksimal.</p>
+                        </div>
+                    </div>
+                    <!-- FAQ Item 10 -->
+                    <div class="border border-gray-200 rounded-lg" data-aos="fade-up">
+                        <button @click="active = active === 10 ? null : 10" class="w-full flex items-center justify-between p-6 text-left">
+                            <span class="text-lg font-semibold text-secondary">Apakah MyERP Plus bisa diintegrasikan dengan sistem lain?</span>
+                            <svg class="w-6 h-6 transition-transform" :class="{'transform rotate-180': active === 10}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div x-cloak x-show="active === 10" x-transition class="p-6 pt-0 text-gray-600">
+                            <p>Bisa. MyERP Plus mendukung API Integration sehingga dapat dihubungkan dengan aplikasi pihak ketiga seperti marketplace, e-commerce, sistem bank, dan aplikasi internal perusahaan.</p>
                         </div>
                     </div>
                 </div>

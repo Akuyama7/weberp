@@ -197,51 +197,63 @@
             </div>
         </section>
         
-        <!-- ===== Trusted By Section ===== -->
-        <section class="py-16 bg-white">
-            <div class="container mx-auto px-6">
-                <h2 class="text-center text-3xl font-bold text-secondary mb-4" data-aos="fade-up">Dipercaya oleh 1.000+ Klien</h2>
-                <div class="w-24 h-1 bg-primary mx-auto mb-12" data-aos="fade-up"></div>
-                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center" data-aos="fade-up" data-aos-delay="100">
-                    <div class="flex justify-center items-center h-16">
-                        <img src="logo1.png" alt="Logo Klien 1" class="max-h-14 max-w-full">
-                    </div>
-                    <div class="flex justify-center items-center h-16">
-                        <img src="logo2.png" alt="Logo Klien 2" class="max-h-14 max-w-full">
-                    </div>
-                    <div class="flex justify-center items-center h-16">
-                        <img src="logo3.png" alt="Logo Klien 3" class="max-h-14 max-w-full">
-                    </div>
-                    <div class="flex justify-center items-center h-16">
-                        <img src="logo4.png" alt="Logo Klien 4" class="max-h-14 max-w-full">
-                    </div>
-                    <div class="flex justify-center items-center h-16">
-                        <img src="logo5.png" alt="Logo Klien 5" class="max-h-14 max-w-full">
-                    </div>
-                    <div class="flex justify-center items-center h-16">
-                        <img src="logo6.png" alt="Logo Klien 6" class="max-h-14 max-w-full">
-                    </div>
-                    <div class="flex justify-center items-center h-16">
-                        <img src="logo7.png" alt="Logo Klien 7" class="max-h-14 max-w-full">
-                    </div>
-                    <div class="flex justify-center items-center h-16">
-                        <img src="logo8.png" alt="Logo Klien 8" class="max-h-14 max-w-full">
-                    </div>
-                    <div class="flex justify-center items-center h-16">
-                        <img src="logo9.png" alt="Logo Klien 9" class="max-h-14 max-w-full">
-                    </div>
-                    <div class="flex justify-center items-center h-16">
-                        <img src="logo10.png" alt="Logo Klien 10" class="max-h-14 max-w-full">
-                    </div>
-                    <div class="flex justify-center items-center h-16">
-                        <img src="logo11.png" alt="Logo Klien 11" class="max-h-14 max-w-full">
-                    </div>
-                    <div class="flex justify-center items-center h-16">
-                        <img src="logo12.png" alt="Logo Klien 12" class="max-h-14 max-w-full">
-                    </div>
-                </div>
-            </div>
-        </section>
+        <!-- ===== Trusted By Section (Slider Autoplay) ===== -->
+<section class="py-16 bg-white">
+  <div class="container mx-auto px-6">
+    <h2 class="text-center text-3xl font-bold text-secondary mb-4" data-aos="fade-up">
+      Dipercaya oleh 1.000+ Klien
+    </h2>
+    <div class="w-24 h-1 bg-primary mx-auto mb-12" data-aos="fade-up"></div>
+
+    <div class="logo-slider" data-aos="fade-up" data-aos-delay="100">
+      <div class="logo-track">
+        <img src="logo1.png" alt="Logo Klien 1" />
+        <img src="logo2.png" alt="Logo Klien 2" />
+        <img src="logo3.png" alt="Logo Klien 3" />
+        <img src="logo4.png" alt="Logo Klien 4" />
+        <img src="logo5.png" alt="Logo Klien 5" />
+        <img src="logo6.png" alt="Logo Klien 6" />
+        <img src="logo7.png" alt="Logo Klien 7" />
+        <img src="logo8.png" alt="Logo Klien 8" />
+        <img src="logo9.png" alt="Logo Klien 9" />
+        <img src="logo10.png" alt="Logo Klien 10" />
+        <img src="logo11.png" alt="Logo Klien 11" />
+        <img src="logo12.png" alt="Logo Klien 12" />
+        <!-- duplikat agar looping mulus -->
+        <img src="logo1.png" alt="Logo Klien 1" />
+        <img src="logo2.png" alt="Logo Klien 2" />
+        <img src="logo3.png" alt="Logo Klien 3" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.logo-slider {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+}
+.logo-track {
+  display: inline-block;
+  animation: scroll-left 25s linear infinite;
+}
+.logo-track img {
+  height: 60px;
+  margin: 0 40px;
+  display: inline-block;
+  filter: grayscale(100%) brightness(1.4);
+  transition: all 0.3s ease;
+}
+.logo-track img:hover {
+  filter: grayscale(0%) brightness(1);
+}
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+</style>
+
 
         <!-- ===== Solutions by Industry Section ===== -->
         <section id="solusi" class="py-24 bg-light">
@@ -685,3 +697,4 @@
 
 </body>
 </html>
+

@@ -385,17 +385,13 @@
         <h2 class="text-4xl md:text-5xl font-bold text-secondary">Paket Harga yang Fleksibel</h2>
         <p class="mt-4 text-lg text-gray-600">Pilih paket yang paling sesuai dengan skala dan kebutuhan bisnis Anda saat ini.</p>
       </div>
-      <!-- Toggle global: tutup/buka semua fitur -->
-      <button id="toggle-features"
-              class="shrink-0 inline-flex items-center justify-center px-4 py-2 rounded-lg border border-gray-300 text-sm font-semibold hover:bg-gray-50 transition-colors">
-        Sembunyikan fitur utama
-      </button>
     </div>
 
     <!-- Cards -->
     <div class="grid lg:grid-cols-3 gap-8 mt-16 max-w-6xl mx-auto items-stretch">
-      <!-- Essentials -->
-      <article class="border border-gray-200 rounded-xl p-8 flex flex-col bg-white" data-aos="fade-up">
+
+      <!-- Starter -->
+      <article class="border border-gray-200 rounded-xl p-8 flex flex-col bg-white">
         <h3 class="text-2xl font-semibold text-secondary">Starter</h3>
         <p class="text-gray-500 mt-1">Tingkatkan visibilitas keuangan dengan manajemen keuangan digital.</p>
 
@@ -410,38 +406,40 @@
 
         <!-- Harga + Diskon -->
         <div class="mt-6 flex items-center gap-3">
-          <span class="old-price text-gray-400 line-through" data-old="399000">Rp 399,000</span>
-          <span class="discount-badge text-xs px-3 py-1 rounded-full border border-blue-300 text-blue-600" data-discount="10">diskon 10%</span>
+          <span class="text-gray-400 line-through">Rp 399,000</span>
+          <span class="text-xs px-3 py-1 rounded-full border border-blue-300 text-blue-600">diskon 10%</span>
         </div>
         <div class="flex items-baseline gap-1 mt-1">
-          <p class="current-price text-4xl font-bold text-secondary">Rp 359,100</p>
-          <span class="text-lg font-normal text-gray-500">/bulan</span>
+          <p class="text-4xl font-bold text-secondary">Rp 359,100</p>
+          <span class="text-lg text-gray-500">/bulan</span>
         </div>
         <p class="text-sm text-gray-500">*dibayar per tahun</p>
 
-        <!-- CTA + Fitur (tetap di bawah, sejajar antar kartu) -->
+        <!-- CTA + Fitur -->
         <div class="mt-auto">
           <a href="https://wa.me/6281315842172" target="_blank"
              class="mt-6 block w-full text-center bg-primary text-white font-semibold py-3 rounded-lg hover:bg-primary-dark transition-colors">
             WhatsApp Sales
           </a>
 
-          <!-- Fitur utama: default terbuka -->
-          <div class="features mt-4 pt-4 border-t">
-            <p class="font-semibold text-secondary mb-3">Fitur utama paket Starter</p>
-            <ul class="space-y-3 text-gray-600">
-              <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" viewBox="0 0 20 20" fill="currentColor"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Sales lifecycle (quote to pay)</li>
-              <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" viewBox="0 0 20 20" fill="currentColor"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Purchase lifecycle (request to pay)</li>
-              <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" viewBox="0 0 20 20" fill="currentColor"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Rekonsiliasi bank</li>
-              <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" viewBox="0 0 20 20" fill="currentColor"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Manajemen produk & inventori</li>
-              <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" viewBox="0 0 20 20" fill="currentColor"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Manajemen aset</li>
+          <div class="features mt-4 pt-4 border-t" data-open="true">
+            <div class="flex justify-between items-center cursor-pointer toggle-feature">
+              <p class="font-semibold text-secondary">Fitur utama paket Starter</p>
+              <span class="text-sm text-primary">Tutup</span>
+            </div>
+            <ul class="space-y-3 text-gray-600 mt-3">
+              <li class="flex items-center">Sales lifecycle (quote to pay)</li>
+              <li class="flex items-center">Purchase lifecycle (request to pay)</li>
+              <li class="flex items-center">Rekonsiliasi bank</li>
+              <li class="flex items-center">Manajemen produk & inventori</li>
+              <li class="flex items-center">Manajemen aset</li>
             </ul>
           </div>
         </div>
       </article>
 
-      <!-- Plus -->
-      <article class="border-2 border-primary rounded-xl p-8 flex flex-col bg-white" data-aos="fade-up" data-aos-delay="100">
+      <!-- Pro -->
+      <article class="border-2 border-primary rounded-xl p-8 flex flex-col bg-white">
         <div class="flex justify-between items-center">
           <h3 class="text-2xl font-semibold text-secondary">Paket Pro</h3>
           <span class="bg-primary text-white text-xs font-bold px-3 py-1 rounded-full">PALING POPULER</span>
@@ -459,12 +457,12 @@
 
         <!-- Harga + Diskon -->
         <div class="mt-6 flex items-center gap-3">
-          <span class="old-price text-gray-400 line-through" data-old="899000">Rp 899,000</span>
-          <span class="discount-badge text-xs px-3 py-1 rounded-full border border-blue-300 text-blue-600" data-discount="10">diskon 10%</span>
+          <span class="text-gray-400 line-through">Rp 899,000</span>
+          <span class="text-xs px-3 py-1 rounded-full border border-blue-300 text-blue-600">diskon 10%</span>
         </div>
         <div class="flex items-baseline gap-1 mt-1">
-          <p class="current-price text-4xl font-bold text-secondary">Rp 809,100</p>
-          <span class="text-lg font-normal text-gray-500">/bulan</span>
+          <p class="text-4xl font-bold text-secondary">Rp 809,100</p>
+          <span class="text-lg text-gray-500">/bulan</span>
         </div>
         <p class="text-sm text-gray-500">*dibayar per tahun</p>
 
@@ -474,23 +472,26 @@
             WhatsApp Sales
           </a>
 
-          <div class="features mt-4 pt-4 border-t">
-            <p class="font-semibold text-secondary mb-3">Fitur utama paket Pro </p>
-            <ul class="space-y-3 text-gray-600">
-              <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" viewBox="0 0 20 20" fill="currentColor"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Semua fitur di Essentials</li>
-              <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" viewBox="0 0 20 20" fill="currentColor"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Konsolidasi laporan keuangan</li>
-              <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" viewBox="0 0 20 20" fill="currentColor"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Transaksi 20+ mata uang asing</li>
-              <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" viewBox="0 0 20 20" fill="currentColor"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Bundling produk</li>
-              <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" viewBox="0 0 20 20" fill="currentColor"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Multi-layer approval</li>
-              <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" viewBox="0 0 20 20" fill="currentColor"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>3 user & multi-gudang</li>
+          <div class="features mt-4 pt-4 border-t" data-open="true">
+            <div class="flex justify-between items-center cursor-pointer toggle-feature">
+              <p class="font-semibold text-secondary">Fitur utama paket Pro</p>
+              <span class="text-sm text-primary">Tutup</span>
+            </div>
+            <ul class="space-y-3 text-gray-600 mt-3">
+              <li>Semua fitur Starter</li>
+              <li>Konsolidasi laporan keuangan</li>
+              <li>Transaksi 20+ mata uang asing</li>
+              <li>Bundling produk</li>
+              <li>Multi-layer approval</li>
+              <li>3 user & multi-gudang</li>
             </ul>
           </div>
         </div>
       </article>
 
-      <!-- MyERP Plus -->
-      <article class="border border-gray-200 rounded-xl p-8 flex flex-col bg-white" data-aos="fade-up" data-aos-delay="200">
-        <h3 class="text-2xl font-semibold text-secondary">Paket Enterpise</h3>
+      <!-- Enterprise -->
+      <article class="border border-gray-200 rounded-xl p-8 flex flex-col bg-white">
+        <h3 class="text-2xl font-semibold text-secondary">Paket Enterprise</h3>
         <p class="text-gray-500 mt-1">Capai operasional optimal dan dapatkan insight bisnis berharga.</p>
 
         <div class="bg-red-50 border border-red-200 rounded-lg p-4 mt-6 text-sm">
@@ -502,11 +503,16 @@
           </ul>
         </div>
 
-        <!-- Harga: model diskusi -->
-        <div class="mt-6">
-          <p class="text-4xl font-bold text-secondary">Diskusi dengan kami</p>
-          <p class="text-sm text-gray-500">&nbsp;</p>
+        <!-- Harga + Diskon -->
+        <div class="mt-6 flex items-center gap-3">
+          <span class="text-gray-400 line-through">Rp 1,499,000</span>
+          <span class="text-xs px-3 py-1 rounded-full border border-blue-300 text-blue-600">diskon 10%</span>
         </div>
+        <div class="flex items-baseline gap-1 mt-1">
+          <p class="text-4xl font-bold text-secondary">Rp 1,349,100</p>
+          <span class="text-lg text-gray-500">/bulan</span>
+        </div>
+        <p class="text-sm text-gray-500">*dibayar per tahun</p>
 
         <div class="mt-auto">
           <a href="https://wa.me/6281315842172" target="_blank"
@@ -514,60 +520,56 @@
             WhatsApp Sales
           </a>
 
-          <div class="features mt-4 pt-4 border-t">
-            <p class="font-semibold text-secondary mb-3">Fitur utama paket Enterprise</p>
-            <ul class="space-y-3 text-gray-600">
-              <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" viewBox="0 0 20 20" fill="currentColor"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Semua fitur di Plus</li>
-              <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" viewBox="0 0 20 20" fill="currentColor"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Bill of materials & work order</li>
-              <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" viewBox="0 0 20 20" fill="currentColor"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Batch, expiry & serial number</li>
-              <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" viewBox="0 0 20 20" fill="currentColor"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Fulfillment inbound & outbound</li>
-              <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" viewBox="0 0 20 20" fill="currentColor"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Custom dashboard</li>
-              <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" viewBox="0 0 20 20" fill="currentColor"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>5 user & multi-gudang</li>
+          <div class="features mt-4 pt-4 border-t" data-open="true">
+            <div class="flex justify-between items-center cursor-pointer toggle-feature">
+              <p class="font-semibold text-secondary">Fitur utama paket Enterprise</p>
+              <span class="text-sm text-primary">Tutup</span>
+            </div>
+            <ul class="space-y-3 text-gray-600 mt-3">
+              <li>Manajemen produksi advanced</li>
+              <li>Analisa bisnis advanced</li>
+              <li>Manajemen gudang kompleks</li>
+              <li>Integrasi sistem pihak ketiga</li>
+              <li>Business intelligence & dashboard</li>
+              <li>Support prioritas</li>
             </ul>
           </div>
         </div>
       </article>
+
     </div>
   </div>
-
-  <!-- Script: diskon otomatis + toggle global fitur -->
-  <script>
-    (function () {
-      // Format rupiah (ID)
-      const fmt = new Intl.NumberFormat('id-ID');
-
-      // Hitung harga diskon otomatis untuk setiap card yang punya data-old & data-discount
-      document.querySelectorAll('article').forEach(card => {
-        const oldEl = card.querySelector('.old-price');
-        const discBadge = card.querySelector('.discount-badge');
-        const curEl = card.querySelector('.current-price');
-
-        if (oldEl && discBadge && curEl) {
-          const oldVal = Number(oldEl.dataset.old || 0);
-          const discPct = Number(discBadge.dataset.discount || 0);
-
-          if (oldVal > 0 && discPct > 0) {
-            const discounted = Math.round(oldVal - (oldVal * discPct) / 100);
-            oldEl.textContent = `Rp ${fmt.format(oldVal)}`;
-            curEl.textContent = `Rp ${fmt.format(discounted)}`;
-            discBadge.textContent = `diskon ${discPct}%`;
-          }
-        }
-      });
-
-      // Toggle global: sembunyikan/tampilkan SEMUA fitur utama serentak
-      const btn = document.getElementById('toggle-features');
-      let shown = true; // default terbuka
-      btn?.addEventListener('click', () => {
-        shown = !shown;
-        document.querySelectorAll('#harga .features').forEach(f => {
-          f.classList.toggle('hidden', !shown);
-        });
-        btn.textContent = shown ? 'Sembunyikan fitur utama' : 'Tampilkan fitur utama';
-      });
-    })();
-  </script>
 </section>
+
+<!-- Script Toggle Semua -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const toggles = document.querySelectorAll(".toggle-feature");
+
+  toggles.forEach(toggle => {
+    toggle.addEventListener("click", () => {
+      const allFeatures = document.querySelectorAll(".features");
+      const isOpen = toggle.parentElement.getAttribute("data-open") === "true";
+
+      if (isOpen) {
+        // Tutup semua
+        allFeatures.forEach(f => {
+          f.querySelector("ul").style.display = "none";
+          f.setAttribute("data-open", "false");
+          f.querySelector("span").innerText = "Lihat fitur";
+        });
+      } else {
+        // Buka semua
+        allFeatures.forEach(f => {
+          f.querySelector("ul").style.display = "block";
+          f.setAttribute("data-open", "true");
+          f.querySelector("span").innerText = "Tutup";
+        });
+      }
+    });
+  });
+});
+</script>
 
 
         <!-- ===== FAQ Section ===== -->
@@ -844,6 +846,7 @@
 
 </body>
 </html>
+
 
 
 

@@ -1,5 +1,5 @@
 <!-- ======================================================================= -->
-<!-- FILE 1: index.html (DIPERBARUI DENGAN ALERT KLIK KANAN)                 -->
+<!-- FILE 1: index.html (DIPERBARUI DENGAN TAMPILAN RESPONSIVE)              -->
 <!-- ======================================================================= -->
 <!DOCTYPE html>
 <html lang="id" class="scroll-smooth">
@@ -40,6 +40,10 @@
         .hero-bg { 
             position: relative;
             color: white;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         #bg-video {
             position: absolute;
@@ -51,7 +55,7 @@
             height: auto;
             z-index: -1;
             transform: translateX(-50%) translateY(-50%);
-            background-size: cover;
+            object-fit: cover;
         }
         .hero-overlay {
             position: absolute;
@@ -62,13 +66,6 @@
             background-color: rgba(17, 24, 39, 0.6);
             background-image: linear-gradient(to top, rgba(17, 24, 39, 0.8), transparent 50%);
         }
-        .logo-grayscale { 
-            filter: grayscale(100%) brightness(1.5);
-            transition: all 0.3s ease;
-        }
-        .logo-grayscale:hover { 
-            filter: grayscale(0%) brightness(1);
-        }
         .feature-card { transition: all 0.3s ease; }
         .feature-card:hover { transform: translateY(-8px); box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1); }
         .floating-btn { position: fixed; bottom: 20px; right: 20px; transition: all 0.3s ease; z-index: 40; }
@@ -78,6 +75,24 @@
         .contact-us-btn { bottom: 160px; }
         [x-cloak] { display: none !important; }
 
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+        .logos-container {
+            overflow: hidden;
+            padding: 2rem 0;
+            white-space: nowrap;
+            position: relative;
+        }
+        .logos-slide {
+            display: inline-block;
+            animation: scroll 40s linear infinite;
+        }
+        .logos-slide img {
+            height: 3.5rem; /* 56px */
+            margin: 0 40px;
+        }
         /* Custom Alert Box */
         .custom-alert-overlay {
             position: fixed;
@@ -106,25 +121,6 @@
     </style>
 </head>
 <body class="bg-white font-sans text-gray-700 antialiased" x-data="{}">
-
-    <!-- ===== Top Bar ===== -->
-    <div class="bg-gray-100 border-b border-gray-200 text-sm text-gray-600">
-        <div class="container mx-auto px-6 py-2 flex justify-between items-center">
-            <div class="flex items-center space-x-6">
-                <a href="mailto:pttridayaciptateknologi@gmail.com" class="flex items-center hover:text-primary">
-                    <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
-                    <span>pttridayaciptateknologi@gmail.com</span>
-                </a>
-                <a href="tel:+6281315842172" class="flex items-center hover:text-primary">
-                    <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.518.759a11.024 11.024 0 005.152 5.152l.759-1.518a1 1 0 011.06-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path></svg>
-                    <span>+62 813-1584-2172</span>
-                </a>
-            </div>
-            <div class="hidden md:block">
-                <span>Solusi ERP No. 1 di Indonesia</span>
-            </div>
-        </div>
-    </div>
 
     <!-- ===== Header / Navbar ===== -->
     <header id="header" class="bg-white/95 backdrop-blur-lg sticky top-0 left-0 right-0 z-50 transition-all duration-300 shadow-md">
@@ -169,7 +165,7 @@
 
     <main>
         <!-- ===== Hero Section ===== -->
-        <section id="beranda" class="relative h-screen flex items-center justify-center text-center hero-bg">
+        <section id="beranda" class="relative hero-bg">
             <video autoplay muted loop id="bg-video">
                 <source src="ERP.mp4" type="video/mp4">
                 Your browser does not support the video tag.
@@ -178,7 +174,7 @@
             <div class="relative z-10 container mx-auto px-6" data-aos="fade-up">
                 <div class="grid lg:grid-cols-2 gap-12 items-center">
                     <div class="text-center lg:text-left">
-                        <h1 class="text-5xl md:text-7xl font-black text-white uppercase tracking-wider">
+                        <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white uppercase tracking-wider">
                             <span class="text-primary">TRANSFORMASIKAN</span> BISNIS ANDA
                         </h1>
                         <p class="mt-6 text-lg md:text-xl text-gray-300 max-w-2xl mx-auto lg:mx-0">
@@ -197,126 +193,30 @@
             </div>
         </section>
         
-   <!-- ===== Trusted By Section (Logo + Nama PT) ===== -->
-<section class="py-16 bg-white">
-  <div class="container mx-auto px-6">
-    <h2 class="text-center text-3xl font-bold text-secondary mb-4" data-aos="fade-up">
-      Dipercaya oleh 1.000+ Klien
-    </h2>
-    <div class="w-24 h-1 bg-primary mx-auto mb-12" data-aos="fade-up"></div>
-
-    <div class="logo-slider" data-aos="fade-up" data-aos-delay="100">
-      <div class="logo-track">
-        <div class="logo-item">
-            <img src="logo1.png" alt="Logo Klien 1" />
-            <p>PT Sinar Bintang Mulia</p>
+        <!-- ===== Trusted By Section ===== -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-center text-3xl font-bold text-secondary mb-4" data-aos="fade-up">Dipercaya oleh 1.000+ Klien</h2>
+                <div class="w-24 h-1 bg-primary mx-auto mb-12" data-aos="fade-up"></div>
             </div>
-            <div class="logo-item">
-            <img src="logo2.png" alt="Logo Klien 2" />
-            <p>PT Kawata Indonesia</p>
+            <div class="logos-container" data-aos="fade-up">
+                <div class="logos-slide">
+                    <img src="logo1.png" alt="Logo Klien 1">
+                    <img src="logo2.png" alt="Logo Klien 2">
+                    <img src="logo3.png" alt="Logo Klien 3">
+                    <img src="logo4.png" alt="Logo Klien 4">
+                    <img src="logo5.png" alt="Logo Klien 5">
+                    <img src="logo6.png" alt="Logo Klien 6">
+                    <!-- Duplicate logos for seamless scroll -->
+                    <img src="logo1.png" alt="Logo Klien 1">
+                    <img src="logo2.png" alt="Logo Klien 2">
+                    <img src="logo3.png" alt="Logo Klien 3">
+                    <img src="logo4.png" alt="Logo Klien 4">
+                    <img src="logo5.png" alt="Logo Klien 5">
+                    <img src="logo6.png" alt="Logo Klien 6">
+                </div>
             </div>
-            <div class="logo-item">
-            <img src="logo3.png" alt="Logo Klien 3" />
-            <p>PT Supa Surya Niaga</p>
-            </div>
-            <div class="logo-item">
-            <img src="logo4.png" alt="Logo Klien 4" />
-            <p>PT Topla Abadi Jaya</p>
-            </div>
-            <div class="logo-item">
-            <img src="logo5.png" alt="Logo Klien 5" />
-            <p>PT Ikuyo Indonesia</p>
-            </div>
-            <div class="logo-item">
-            <img src="logo6.png" alt="Logo Klien 6" />
-            <p>PT Motasa Indonesia</p>
-            </div>
-            <div class="logo-item">
-            <img src="logo7.png" alt="Logo Klien 7" />
-            <p>PT Narumi Indonesia Manufacturing</p>
-            </div>
-            <div class="logo-item">
-            <img src="logo8.png" alt="Logo Klien 8" />
-            <p>CV Gunung Satria Abadi</p>
-            </div>
-            <div class="logo-item">
-            <img src="logo9.png" alt="Logo Klien 9" />
-            <p>PT Satwa Medika Utama</p>
-            </div>
-            <div class="logo-item">
-            <img src="logo10.png" alt="Logo Klien 10" />
-            <p>Koperasi Warga Semen Gresik</p>
-            </div>
-            <div class="logo-item">
-            <img src="logo11.png" alt="Logo Klien 11" />
-            <p>PT Nanda Persada Transport</p>
-            </div>
-            <div class="logo-item">
-            <img src="logo12.png" alt="Logo Klien 12" />
-            <p>PT Seremu Teknik Surabaya</p>
-            </div>
-            <div class="logo-item">
-        <!-- duplikat agar looping mulus -->
-            <img src="logo1.png" alt="Logo Klien 1" />
-            <p>PT Sinar Bintang Mulia</p>
-            </div>
-            <div class="logo-item">
-            <img src="logo2.png" alt="Logo Klien 2" />
-            <p>PT Kawata Indonesia</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<style>
-.logo-slider {
-  overflow: hidden;
-  white-space: nowrap;
-  width: 100%;
-}
-
-.logo-track {
-  display: inline-flex;
-  animation: scroll-left 25s linear infinite;
-}
-
-.logo-item {
-  width: 160px;
-  height: 120px;
-  margin: 0 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.logo-item img {
-  width: 160px;
-  height: 80px;
-  object-fit: contain;
-  display: block;
-  transition: transform 0.3s ease;
-}
-
-.logo-item p {
-  font-size: 0.875rem; /* text-sm */
-  color: #374151; /* gray-700 */
-  margin-top: 0.5rem;
-  font-weight: 500;
-}
-
-.logo-item:hover img {
-  transform: scale(1.05);
-}
-
-@keyframes scroll-left {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-</style>
-
-
+        </section>
 
         <!-- ===== Solutions by Industry Section ===== -->
         <section id="solusi" class="py-24 bg-light">
@@ -389,24 +289,23 @@
                     <p class="mt-4 text-lg text-gray-600">Pilih paket yang paling sesuai dengan skala dan kebutuhan bisnis Anda saat ini.</p>
                 </div>
                 <div class="grid lg:grid-cols-3 gap-8 mt-16 max-w-6xl mx-auto items-start">
-                    <!-- Paket Simple -->
+                    <!-- Essentials Plan -->
                     <div x-data="{ open: false }" class="border border-gray-200 rounded-xl p-8 flex flex-col bg-white" data-aos="fade-up">
-                        <h3 class="text-2xl font-semibold text-secondary">Paket Starter</h3>
-                        <p class="text-gray-500 mt-1">Tingkatkan visibilitas keuangan dengan manajemen keuangan digital.</p>
+                        <h3 class="text-2xl font-semibold text-secondary">Essentials</h3>
+                        <p class="text-gray-500 mt-1">Tingkatkan visibilitas keuangan dengan solusi manajemen keuangan digital.</p>
                         <div class="bg-red-50 border border-red-200 rounded-lg p-4 mt-6 text-sm">
                             <p class="font-bold text-secondary mb-2">Bisnis dengan kebutuhan:</p>
                             <ul class="list-disc list-inside text-gray-600 space-y-1">
-                                <li>Pencatatan keuangan sederhana</li>
-                                <li>JManajemen stok & inventori dasar</li>
-                                <li>Laporan keuangan otomatis</li>
-                                <li>Operasional 1 cabang / 1 gudang</li>
+                                <li>Pencatatan keuangan digital</li>
+                                <li>Automasi operasional keuangan</li>
+                                <li>Manajemen inventori sederhana</li>
                             </ul>
                         </div>
-                        <p class="text-4xl font-bold text-secondary mt-6">Rp 259,100<span class="text-lg font-normal text-gray-500">/bulan</span></p>
+                        <p class="text-4xl font-bold text-secondary mt-6">Rp 359,100<span class="text-lg font-normal text-gray-500">/bulan</span></p>
                         <p class="text-sm text-gray-500">*dibayar per tahun</p>
                         <a href="https://wa.me/6281315842172" target="_blank" class="mt-6 block w-full text-center bg-primary text-white font-semibold py-3 rounded-lg hover:bg-primary-dark transition-colors">WhatsApp Sales</a>
                         <button @click="open = !open" class="mt-4 block w-full text-center bg-white border border-gray-300 text-gray-700 font-semibold py-3 rounded-lg hover:bg-gray-50 transition-colors">
-                            Fitur utama paket Starter
+                            Fitur utama paket Essentials
                             <svg class="w-5 h-5 inline-block transition-transform" :class="{'transform rotate-180': open}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </button>
                         <div x-cloak x-show="open" x-transition class="mt-4 pt-4 border-t">
@@ -423,24 +322,23 @@
                     <!-- Pro Plan -->
                     <div x-data="{ open: false }" class="border-2 border-primary rounded-xl p-8 flex flex-col bg-white" data-aos="fade-up" data-aos-delay="100">
                         <div class="flex justify-between items-center">
-                            <h3 class="text-2xl font-semibold text-secondary">Paket Pro</h3>
+                            <h3 class="text-2xl font-semibold text-secondary">Plus</h3>
                             <span class="bg-primary text-white text-xs font-bold px-3 py-1 rounded-full">PALING POPULER</span>
                         </div>
                         <p class="text-gray-500 mt-1">Tingkatkan profitabilitas bisnis dengan kelola operasional yang kompleks.</p>
                         <div class="bg-red-50 border border-red-200 rounded-lg p-4 mt-6 text-sm">
                             <p class="font-bold text-secondary mb-2">Bisnis dengan kebutuhan:</p>
                             <ul class="list-disc list-inside text-gray-600 space-y-1">
-                                 <li>Pengelolaan multi gudang & multi user</li>
-                                <li>Transaksi multi-currency & multi-cabang</li>
-                                <li>Manajemen produk & stok yang lebih kompleks</li>
-                                <li>Laporan konsolidasi untuk beberapa unit bisnis</li>
+                                <li>Transaksi multinasional & fleksibel</li>
+                                <li>Mengelola banyak gudang</li>
+                                <li>Manajemen produk kompleks</li>
                             </ul>
                         </div>
-                        <p class="text-4xl font-bold text-secondary mt-6">Rp 409,100<span class="text-lg font-normal text-gray-500">/bulan</span></p>
+                        <p class="text-4xl font-bold text-secondary mt-6">Rp 809,100<span class="text-lg font-normal text-gray-500">/bulan</span></p>
                         <p class="text-sm text-gray-500">*dibayar per tahun</p>
                         <a href="https://wa.me/6281315842172" target="_blank" class="mt-6 block w-full text-center bg-primary text-white font-semibold py-3 rounded-lg hover:bg-primary-dark transition-colors">WhatsApp Sales</a>
                         <button @click="open = !open" class="mt-4 block w-full text-center bg-white border border-gray-300 text-gray-700 font-semibold py-3 rounded-lg hover:bg-gray-50 transition-colors">
-                            Fitur utama paket Professional
+                            Fitur utama paket Plus
                             <svg class="w-5 h-5 inline-block transition-transform" :class="{'transform rotate-180': open}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </button>
                          <div x-cloak x-show="open" x-transition class="mt-4 pt-4 border-t">
@@ -456,22 +354,21 @@
                     </div>
                     <!-- Enterprise Plan -->
                     <div x-data="{ open: false }" class="border border-gray-200 rounded-xl p-8 flex flex-col bg-white" data-aos="fade-up" data-aos-delay="200">
-                        <h3 class="text-2xl font-semibold text-secondary">Paket Enterprise</h3>
+                        <h3 class="text-2xl font-semibold text-secondary">MyERP Plus</h3>
                         <p class="text-gray-500 mt-1">Capai operasional optimal dan dapatkan insight bisnis berharga.</p>
                         <div class="bg-red-50 border border-red-200 rounded-lg p-4 mt-6 text-sm">
                             <p class="font-bold text-secondary mb-2">Bisnis dengan kebutuhan:</p>
                             <ul class="list-disc list-inside text-gray-600 space-y-1">
-                                <li>Manufaktur & produksi berskala besar</li>
-                                <li>Workflow approval & keamanan tingkat lanjut</li>
-                                <li>Business Intelligence & analisa data mendalam</li>
-                                <li>Integrasi antar sistem & support prioritas</li>
+                                <li>Manajemen produksi yang advanced</li>
+                                <li>Analisa bisnis yang advanced</li>
+                                <li>Manajemen gudang yang kompleks</li>
                             </ul>
                         </div>
                         <p class="text-4xl font-bold text-secondary mt-6">Diskusi dengan kami</p>
                         <p class="text-sm text-gray-500">&nbsp;</p>
                         <a href="https://wa.me/6281315842172" target="_blank" class="mt-6 block w-full text-center bg-primary text-white font-semibold py-3 rounded-lg hover:bg-primary-dark transition-colors">WhatsApp Sales</a>
                         <button @click="open = !open" class="mt-4 block w-full text-center bg-white border border-gray-300 text-gray-700 font-semibold py-3 rounded-lg hover:bg-gray-50 transition-colors">
-                            Fitur utama paket Enterprise
+                            Fitur utama paket MyERP Plus
                             <svg class="w-5 h-5 inline-block transition-transform" :class="{'transform rotate-180': open}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </button>
                         <div x-cloak x-show="open" x-transition class="mt-4 pt-4 border-t">
@@ -763,14 +660,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-

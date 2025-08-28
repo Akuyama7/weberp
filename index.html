@@ -193,30 +193,125 @@
             </div>
         </section>
         
-        <!-- ===== Trusted By Section ===== -->
-        <section class="py-16 bg-white">
-            <div class="container mx-auto px-6">
-                <h2 class="text-center text-3xl font-bold text-secondary mb-4" data-aos="fade-up">Dipercaya oleh 1.000+ Klien</h2>
-                <div class="w-24 h-1 bg-primary mx-auto mb-12" data-aos="fade-up"></div>
+       <!-- ===== Trusted By Section (Logo + Nama PT) ===== -->
+<section class="py-16 bg-white">
+  <div class="container mx-auto px-6">
+    <h2 class="text-center text-3xl font-bold text-secondary mb-4" data-aos="fade-up">
+      Dipercaya oleh 1.000+ Klien
+    </h2>
+    <div class="w-24 h-1 bg-primary mx-auto mb-12" data-aos="fade-up"></div>
+
+    <div class="logo-slider" data-aos="fade-up" data-aos-delay="100">
+      <div class="logo-track">
+        <div class="logo-item">
+            <img src="logo1.png" alt="Logo Klien 1" />
+            <p>PT Sinar Bintang Mulia</p>
             </div>
-            <div class="logos-container" data-aos="fade-up">
-                <div class="logos-slide">
-                    <img src="logo1.png" alt="Logo Klien 1">
-                    <img src="logo2.png" alt="Logo Klien 2">
-                    <img src="logo3.png" alt="Logo Klien 3">
-                    <img src="logo4.png" alt="Logo Klien 4">
-                    <img src="logo5.png" alt="Logo Klien 5">
-                    <img src="logo6.png" alt="Logo Klien 6">
-                    <!-- Duplicate logos for seamless scroll -->
-                    <img src="logo1.png" alt="Logo Klien 1">
-                    <img src="logo2.png" alt="Logo Klien 2">
-                    <img src="logo3.png" alt="Logo Klien 3">
-                    <img src="logo4.png" alt="Logo Klien 4">
-                    <img src="logo5.png" alt="Logo Klien 5">
-                    <img src="logo6.png" alt="Logo Klien 6">
-                </div>
+            <div class="logo-item">
+            <img src="logo2.png" alt="Logo Klien 2" />
+            <p>PT Kawata Indonesia</p>
             </div>
-        </section>
+            <div class="logo-item">
+            <img src="logo3.png" alt="Logo Klien 3" />
+            <p>PT Supa Surya Niaga</p>
+            </div>
+            <div class="logo-item">
+            <img src="logo4.png" alt="Logo Klien 4" />
+            <p>PT Topla Abadi Jaya</p>
+            </div>
+            <div class="logo-item">
+            <img src="logo5.png" alt="Logo Klien 5" />
+            <p>PT Ikuyo Indonesia</p>
+            </div>
+            <div class="logo-item">
+            <img src="logo6.png" alt="Logo Klien 6" />
+            <p>PT Motasa Indonesia</p>
+            </div>
+            <div class="logo-item">
+            <img src="logo7.png" alt="Logo Klien 7" />
+            <p>PT Narumi Indonesia Manufacturing</p>
+            </div>
+            <div class="logo-item">
+            <img src="logo8.png" alt="Logo Klien 8" />
+            <p>CV Gunung Satria Abadi</p>
+            </div>
+            <div class="logo-item">
+            <img src="logo9.png" alt="Logo Klien 9" />
+            <p>PT Satwa Medika Utama</p>
+            </div>
+            <div class="logo-item">
+            <img src="logo10.png" alt="Logo Klien 10" />
+            <p>PT Alpha Tech</p>
+            </div>
+            <div class="logo-item">
+            <img src="logo11.png" alt="Logo Klien 11" />
+            <p>PT Alpha Tech</p>
+            </div>
+            <div class="logo-item">
+            <img src="logo12.png" alt="Logo Klien 12" />
+            <p>PT Alpha Tech</p>
+            </div>
+            <div class="logo-item">
+        <!-- duplikat agar looping mulus -->
+            <img src="logo1.png" alt="Logo Klien 1" />
+            <p>PT Sinar Bintang Mulia</p>
+            </div>
+            <div class="logo-item">
+            <img src="logo2.png" alt="Logo Klien 2" />
+            <p>PT Kawata Indonesia</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.logo-slider {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.logo-track {
+  display: inline-flex;
+  animation: scroll-left 25s linear infinite;
+}
+
+.logo-item {
+  width: 160px;
+  height: 120px;
+  margin: 0 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.logo-item img {
+  width: 160px;
+  height: 80px;
+  object-fit: contain;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.logo-item p {
+  font-size: 0.875rem; /* text-sm */
+  color: #374151; /* gray-700 */
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+
+.logo-item:hover img {
+  transform: scale(1.05);
+}
+
+@keyframes scroll-left {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+</style>
+
 
         <!-- ===== Solutions by Industry Section ===== -->
         <section id="solusi" class="py-24 bg-light">
@@ -660,4 +755,5 @@
 
 </body>
 </html>
+
 

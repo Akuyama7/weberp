@@ -1,5 +1,5 @@
 <!-- ======================================================================= -->
-<!-- FILE 1: index.html (DIPERBARUI DENGAN TAMPILAN RESPONSIVE)              -->
+<!-- FILE 1: index.html (DIPERBARUI DENGAN FITUR HARGA BARU)                 -->
 <!-- ======================================================================= -->
 <!DOCTYPE html>
 <html lang="id" class="scroll-smooth">
@@ -77,7 +77,7 @@
 
         @keyframes scroll {
             0% { transform: translateX(0); }
-            100% { transform: translateX(-100%); }
+            100% { transform: translateX(-50%); }
         }
         .logos-container {
             overflow: hidden;
@@ -117,6 +117,9 @@
             display: flex;
             align-items: center;
             gap: 1rem;
+        }
+        .comparison-table tbody tr:hover {
+            background-color: #fef2f2; /* red-50 */
         }
     </style>
 </head>
@@ -194,123 +197,123 @@
         </section>
         
        <!-- ===== Trusted By Section (Logo + Nama PT) ===== -->
-<section class="py-16 bg-white">
-  <div class="container mx-auto px-6">
-    <h2 class="text-center text-3xl font-bold text-secondary mb-4" data-aos="fade-up">
-      Dipercaya oleh 1.000+ Klien
-    </h2>
-    <div class="w-24 h-1 bg-primary mx-auto mb-12" data-aos="fade-up"></div>
+        <section class="py-16 bg-white">
+          <div class="container mx-auto px-6">
+            <h2 class="text-center text-3xl font-bold text-secondary mb-4" data-aos="fade-up">
+              Dipercaya oleh 1.000+ Klien
+            </h2>
+            <div class="w-24 h-1 bg-primary mx-auto mb-12" data-aos="fade-up"></div>
+        
+            <div class="logo-slider" data-aos="fade-up" data-aos-delay="100">
+              <div class="logo-track">
+                <div class="logo-item">
+                    <img src="logo1.png" alt="Logo Klien 1" />
+                    <p>PT Sinar Bintang Mulia</p>
+                    </div>
+                    <div class="logo-item">
+                    <img src="logo2.png" alt="Logo Klien 2" />
+                    <p>PT Kawata Indonesia</p>
+                    </div>
+                    <div class="logo-item">
+                    <img src="logo3.png" alt="Logo Klien 3" />
+                    <p>PT Supa Surya Niaga</p>
+                    </div>
+                    <div class="logo-item">
+                    <img src="logo4.png" alt="Logo Klien 4" />
+                    <p>PT Topla Abadi Jaya</p>
+                    </div>
+                    <div class="logo-item">
+                    <img src="logo5.png" alt="Logo Klien 5" />
+                    <p>PT Ikuyo Indonesia</p>
+                    </div>
+                    <div class="logo-item">
+                    <img src="logo6.png" alt="Logo Klien 6" />
+                    <p>PT Motasa Indonesia</p>
+                    </div>
+                    <div class="logo-item">
+                    <img src="logo7.png" alt="Logo Klien 7" />
+                    <p>PT Narumi Indonesia Manufacturing</p>
+                    </div>
+                    <div class="logo-item">
+                    <img src="logo8.png" alt="Logo Klien 8" />
+                    <p>CV Gunung Satria Abadi</p>
+                    </div>
+                    <div class="logo-item">
+                    <img src="logo9.png" alt="Logo Klien 9" />
+                    <p>PT Satwa Medika Utama</p>
+                    </div>
+                    <div class="logo-item">
+                    <img src="logo10.png" alt="Logo Klien 10" />
+                    <p>PT Alpha Tech</p>
+                    </div>
+                    <div class="logo-item">
+                    <img src="logo11.png" alt="Logo Klien 11" />
+                    <p>PT Alpha Tech</p>
+                    </div>
+                    <div class="logo-item">
+                    <img src="logo12.png" alt="Logo Klien 12" />
+                    <p>PT Alpha Tech</p>
+                    </div>
+                    <div class="logo-item">
+                <!-- duplikat agar looping mulus -->
+                    <img src="logo1.png" alt="Logo Klien 1" />
+                    <p>PT Sinar Bintang Mulia</p>
+                    </div>
+                    <div class="logo-item">
+                    <img src="logo2.png" alt="Logo Klien 2" />
+                    <p>PT Kawata Indonesia</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
-    <div class="logo-slider" data-aos="fade-up" data-aos-delay="100">
-      <div class="logo-track">
-        <div class="logo-item">
-            <img src="logo1.png" alt="Logo Klien 1" />
-            <p>PT Sinar Bintang Mulia</p>
-            </div>
-            <div class="logo-item">
-            <img src="logo2.png" alt="Logo Klien 2" />
-            <p>PT Kawata Indonesia</p>
-            </div>
-            <div class="logo-item">
-            <img src="logo3.png" alt="Logo Klien 3" />
-            <p>PT Supa Surya Niaga</p>
-            </div>
-            <div class="logo-item">
-            <img src="logo4.png" alt="Logo Klien 4" />
-            <p>PT Topla Abadi Jaya</p>
-            </div>
-            <div class="logo-item">
-            <img src="logo5.png" alt="Logo Klien 5" />
-            <p>PT Ikuyo Indonesia</p>
-            </div>
-            <div class="logo-item">
-            <img src="logo6.png" alt="Logo Klien 6" />
-            <p>PT Motasa Indonesia</p>
-            </div>
-            <div class="logo-item">
-            <img src="logo7.png" alt="Logo Klien 7" />
-            <p>PT Narumi Indonesia Manufacturing</p>
-            </div>
-            <div class="logo-item">
-            <img src="logo8.png" alt="Logo Klien 8" />
-            <p>CV Gunung Satria Abadi</p>
-            </div>
-            <div class="logo-item">
-            <img src="logo9.png" alt="Logo Klien 9" />
-            <p>PT Satwa Medika Utama</p>
-            </div>
-            <div class="logo-item">
-            <img src="logo10.png" alt="Logo Klien 10" />
-            <p>PT Alpha Tech</p>
-            </div>
-            <div class="logo-item">
-            <img src="logo11.png" alt="Logo Klien 11" />
-            <p>PT Alpha Tech</p>
-            </div>
-            <div class="logo-item">
-            <img src="logo12.png" alt="Logo Klien 12" />
-            <p>PT Alpha Tech</p>
-            </div>
-            <div class="logo-item">
-        <!-- duplikat agar looping mulus -->
-            <img src="logo1.png" alt="Logo Klien 1" />
-            <p>PT Sinar Bintang Mulia</p>
-            </div>
-            <div class="logo-item">
-            <img src="logo2.png" alt="Logo Klien 2" />
-            <p>PT Kawata Indonesia</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<style>
-.logo-slider {
-  overflow: hidden;
-  white-space: nowrap;
-  width: 100%;
-}
-
-.logo-track {
-  display: inline-flex;
-  animation: scroll-left 25s linear infinite;
-}
-
-.logo-item {
-  width: 160px;
-  height: 120px;
-  margin: 0 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.logo-item img {
-  width: 160px;
-  height: 80px;
-  object-fit: contain;
-  display: block;
-  transition: transform 0.3s ease;
-}
-
-.logo-item p {
-  font-size: 0.875rem; /* text-sm */
-  color: #374151; /* gray-700 */
-  margin-top: 0.5rem;
-  font-weight: 500;
-}
-
-.logo-item:hover img {
-  transform: scale(1.05);
-}
-
-@keyframes scroll-left {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-</style>
+        <style>
+        .logo-slider {
+          overflow: hidden;
+          white-space: nowrap;
+          width: 100%;
+        }
+        
+        .logo-track {
+          display: inline-flex;
+          animation: scroll-left 25s linear infinite;
+        }
+        
+        .logo-item {
+          width: 160px;
+          height: 120px;
+          margin: 0 30px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
+        
+        .logo-item img {
+          width: 160px;
+          height: 80px;
+          object-fit: contain;
+          display: block;
+          transition: transform 0.3s ease;
+        }
+        
+        .logo-item p {
+          font-size: 0.875rem; /* text-sm */
+          color: #374151; /* gray-700 */
+          margin-top: 0.5rem;
+          font-weight: 500;
+        }
+        
+        .logo-item:hover img {
+          transform: scale(1.05);
+        }
+        
+        @keyframes scroll-left {
+          0%   { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+        </style>
 
 
         <!-- ===== Solutions by Industry Section ===== -->
@@ -377,192 +380,71 @@
         </section>
 
        <!-- ===== Pricing Section ===== -->
-<section id="harga" class="py-24 bg-white">
-  <div class="max-w-7xl mx-auto px-6 lg:px-8">
-    <div class="text-center">
-      <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-        Pilih Paket Harga
-      </h2>
-      <p class="mt-4 text-lg text-gray-600">
-        Sesuaikan paket ERP dengan kebutuhan bisnis Anda
-      </p>
-    </div>
-
-    <div class="mt-16 grid grid-cols-1 gap-8 md:grid-cols-3">
-      <!-- Starter -->
-      <div class="rounded-2xl border p-8 shadow-sm hover:shadow-lg transition">
-        <h3 class="text-xl font-semibold text-gray-900">Starter</h3>
-        <p class="mt-2 text-gray-600">
-          Tingkatkan visibilitas keuangan dengan manajemen keuangan digital.
-        </p>
-
-        <div class="mt-4 bg-red-50 p-4 rounded-lg">
-          <h4 class="font-medium">Bisnis dengan kebutuhan:</h4>
-          <ul class="mt-2 list-disc pl-5 text-sm text-gray-700 space-y-1">
-            <li>Pencatatan keuangan digital</li>
-            <li>Automasi operasional keuangan</li>
-            <li>Manajemen inventori sederhana</li>
-          </ul>
-        </div>
-
-        <p class="mt-6 text-sm line-through text-gray-400">Rp 399,000</p>
-        <p class="text-sm text-blue-600 font-medium">diskon 10%</p>
-        <p class="text-2xl font-bold text-gray-900">Rp 359,100 <span class="text-base font-normal">/bulan</span></p>
-        <p class="text-xs text-gray-500">*dibayar per tahun</p>
-
-        <a href="https://wa.me/6281234567890" target="_blank"
-           class="mt-6 block w-full rounded-xl bg-red-600 px-4 py-3 text-center text-white font-semibold hover:bg-red-700">
-          WhatsApp Sales
-        </a>
-
-        <!-- Dropdown Fitur -->
-        <div class="mt-4">
-          <button class="dropdown-toggle w-full flex justify-between items-center px-4 py-2 border rounded-lg text-left font-medium bg-gray-50">
-            Fitur utama paket Starter
-            <span class="arrow">▲</span>
-          </button>
-          <div class="dropdown-content mt-2 space-y-2 text-sm text-gray-700">
-            <ul class="list-disc pl-5 space-y-1">
-              <li>Laporan keuangan otomatis</li>
-              <li>Dashboard manajemen inventori sederhana</li>
-              <li>Integrasi dengan e-Banking</li>
-              <li>Export laporan ke Excel</li>
-              <li>User role dasar (Admin & Staf)</li>
-              <li>Support email & chat</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- Pro -->
-      <div class="rounded-2xl border-2 border-red-500 p-8 shadow-md hover:shadow-lg transition">
-        <h3 class="text-xl font-semibold text-gray-900">Paket Pro 
-          <span class="ml-2 text-xs bg-red-600 text-white px-2 py-1 rounded">PALING POPULER</span>
-        </h3>
-        <p class="mt-2 text-gray-600">
-          Tingkatkan profitabilitas bisnis dengan kelola operasional yang kompleks.
-        </p>
-
-        <div class="mt-4 bg-red-50 p-4 rounded-lg">
-          <h4 class="font-medium">Bisnis dengan kebutuhan:</h4>
-          <ul class="mt-2 list-disc pl-5 text-sm text-gray-700 space-y-1">
-            <li>Transaksi multinasional & fleksibel</li>
-            <li>Mengelola banyak gudang</li>
-            <li>Manajemen produk kompleks</li>
-          </ul>
-        </div>
-
-        <p class="mt-6 text-sm line-through text-gray-400">Rp 899,000</p>
-        <p class="text-sm text-blue-600 font-medium">diskon 10%</p>
-        <p class="text-2xl font-bold text-gray-900">Rp 809,100 <span class="text-base font-normal">/bulan</span></p>
-        <p class="text-xs text-gray-500">*dibayar per tahun</p>
-
-        <a href="https://wa.me/6281234567890" target="_blank"
-           class="mt-6 block w-full rounded-xl bg-red-600 px-4 py-3 text-center text-white font-semibold hover:bg-red-700">
-          WhatsApp Sales
-        </a>
-
-        <!-- Dropdown Fitur -->
-        <div class="mt-4">
-          <button class="dropdown-toggle w-full flex justify-between items-center px-4 py-2 border rounded-lg text-left font-medium bg-gray-50">
-            Fitur utama paket Pro
-            <span class="arrow">▲</span>
-          </button>
-          <div class="dropdown-content mt-2 space-y-2 text-sm text-gray-700">
-            <ul class="list-disc pl-5 space-y-1">
-              <li>Multi warehouse & multi currency</li>
-              <li>Manajemen produk dengan variasi</li>
-              <li>Laporan profit & rugi per divisi</li>
-              <li>Integrasi marketplace</li>
-              <li>Manajemen approval & otorisasi</li>
-              <li>Support prioritas</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- Enterprise -->
-      <div class="rounded-2xl border p-8 shadow-sm hover:shadow-lg transition">
-        <h3 class="text-xl font-semibold text-gray-900">Paket Enterprise</h3>
-        <p class="mt-2 text-gray-600">
-          Capai operasional optimal dan dapatkan insight bisnis berharga.
-        </p>
-
-        <div class="mt-4 bg-red-50 p-4 rounded-lg">
-          <h4 class="font-medium">Bisnis dengan kebutuhan:</h4>
-          <ul class="mt-2 list-disc pl-5 text-sm text-gray-700 space-y-1">
-            <li>Manajemen produksi advanced</li>
-            <li>Analisa bisnis yang advanced</li>
-            <li>Manajemen gudang yang kompleks</li>
-          </ul>
-        </div>
-
-        <p class="mt-6 text-sm line-through text-gray-400"> </p>
-        <br>
-        <p class="text-sm text-blue-600 font-medium"> </p>
-        <br>
-        <p class="text-2xl font-bold text-gray-900">
-           
-          Diskusi Dengan Kami <span class="text-base font-normal"></span>
-        </p>
-        <p class="text-xs text-gray-500"></p>
-
-        <a href="https://wa.me/6281234567890" target="_blank"
-           class="mt-6 block w-full rounded-xl bg-red-600 px-4 py-3 text-center text-white font-semibold hover:bg-red-700">
-          WhatsApp Sales
-        </a>
-
-        <!-- Dropdown Fitur -->
-        <div class="mt-4">
-          <button class="dropdown-toggle w-full flex justify-between items-center px-4 py-2 border rounded-lg text-left font-medium bg-gray-50">
-            Fitur utama paket Enterprise
-            <span class="arrow">▲</span>
-          </button>
-          <div class="dropdown-content mt-2 space-y-2 text-sm text-gray-700">
-            <ul class="list-disc pl-5 space-y-1">
-              <li>Advanced production planning</li>
-              <li>Business intelligence dashboard</li>
-              <li>Integrasi API penuh</li>
-              <li>Custom workflow & automation</li>
-              <li>Manajemen cabang global</li>
-              <li>Dedicated account manager</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<script>
-  const toggles = document.querySelectorAll(".dropdown-toggle");
-
-  toggles.forEach(btn => {
-    btn.addEventListener("click", () => {
-      const isActive = btn.classList.contains("active");
-
-      // Tutup semua
-      toggles.forEach(b => {
-        b.classList.remove("active");
-        b.querySelector(".arrow").textContent = "▲";
-        b.nextElementSibling.style.display = "none";
-      });
-
-      // Buka kembali jika belum aktif
-      if (!isActive) {
-        btn.classList.add("active");
-        btn.querySelector(".arrow").textContent = "▼";
-        btn.nextElementSibling.style.display = "block";
-      }
-    });
-
-    // Default open saat load
-    btn.classList.add("active");
-    btn.querySelector(".arrow").textContent = "▼";
-    btn.nextElementSibling.style.display = "block";
-  });
-</script>
-
+        <section id="harga" class="py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto" data-aos="fade-up">
+                    <h2 class="text-4xl md:text-5xl font-bold text-secondary">Paket Harga yang Fleksibel</h2>
+                    <p class="mt-4 text-lg text-gray-600">Pilih paket yang paling sesuai dengan skala dan kebutuhan bisnis Anda saat ini.</p>
+                </div>
+                <div class="grid lg:grid-cols-3 gap-8 mt-16 max-w-6xl mx-auto items-start">
+                    <!-- Starter Plan -->
+                    <div class="border border-gray-200 rounded-xl p-8 flex flex-col bg-white h-full" data-aos="fade-up">
+                        <h3 class="text-2xl font-semibold text-secondary">Starter</h3>
+                        <div class="mt-6 flex-grow">
+                            <!-- Price Content can be added here if needed -->
+                        </div>
+                        <a href="https://wa.me/6281315842172" target="_blank" class="mt-8 block w-full text-center bg-primary text-white font-semibold py-3 rounded-lg hover:bg-primary-dark transition-colors">WhatsApp Sales</a>
+                        <div class="mt-6 pt-6 border-t">
+                            <p class="font-semibold text-secondary mb-4">5 Fitur Unggulan:</p>
+                            <ul class="space-y-3 text-gray-600">
+                                <li class="flex items-start"><svg class="w-5 h-5 text-green-500 mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg><span>Faktur & Penjualan dasar.</span></li>
+                                <li class="flex items-start"><svg class="w-5 h-5 text-green-500 mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg><span>Manajemen Retur Beli & Jual.</span></li>
+                                <li class="flex items-start"><svg class="w-5 h-5 text-green-500 mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg><span>Kontrol Arus Kas sederhana.</span></li>
+                                <li class="flex items-start"><svg class="w-5 h-5 text-green-500 mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg><span>Manajemen Inventori dasar.</span></li>
+                                <li class="flex items-start"><svg class="w-5 h-5 text-green-500 mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg><span>Laporan Keuangan sederhana.</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Pro Plan -->
+                    <div class="border-2 border-primary rounded-xl p-8 flex flex-col bg-white h-full relative" data-aos="fade-up" data-aos-delay="100">
+                        <span class="bg-primary text-white text-xs font-bold px-3 py-1 rounded-full absolute -top-4 right-6">PALING POPULER</span>
+                        <h3 class="text-2xl font-semibold text-secondary">Pro</h3>
+                        <div class="mt-6 flex-grow">
+                            <!-- Price Content -->
+                        </div>
+                        <a href="https://wa.me/6281315842172" target="_blank" class="mt-8 block w-full text-center bg-primary text-white font-semibold py-3 rounded-lg hover:bg-primary-dark transition-colors">WhatsApp Sales</a>
+                        <div class="mt-6 pt-6 border-t">
+                            <p class="font-semibold text-secondary mb-4">5 Fitur Unggulan:</p>
+                            <ul class="space-y-3 text-gray-600">
+                                <li class="flex items-start"><svg class="w-5 h-5 text-green-500 mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg><span>Proses Pembelian Lengkap (PO & GRN).</span></li>
+                                <li class="flex items-start"><svg class="w-5 h-5 text-green-500 mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg><span>Manajemen Formula Produksi (BOM).</span></li>
+                                <li class="flex items-start"><svg class="w-5 h-5 text-green-500 mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg><span>Kontrol Order & Pengiriman (SO & DO).</span></li>
+                                <li class="flex items-start"><svg class="w-5 h-5 text-green-500 mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg><span>Transaksi Kas & Bank Lengkap.</span></li>
+                                <li class="flex items-start"><svg class="w-5 h-5 text-green-500 mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg><span>Mendukung Multi Gudang.</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Enterprise Plan -->
+                    <div class="border border-gray-200 rounded-xl p-8 flex flex-col bg-white h-full" data-aos="fade-up" data-aos-delay="200">
+                        <h3 class="text-2xl font-semibold text-secondary">Enterprise</h3>
+                        <div class="mt-6 flex-grow">
+                             <p class="text-4xl font-bold text-secondary">Diskusi dengan kami</p>
+                        </div>
+                        <a href="https://wa.me/6281315842172" target="_blank" class="mt-8 block w-full text-center bg-primary text-white font-semibold py-3 rounded-lg hover:bg-primary-dark transition-colors">WhatsApp Sales</a>
+                        <div class="mt-6 pt-6 border-t">
+                            <p class="font-semibold text-secondary mb-4">5 Fitur Unggulan:</p>
+                             <ul class="space-y-3 text-gray-600">
+                                <li class="flex items-start"><svg class="w-5 h-5 text-green-500 mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg><span>Manajemen Penawaran Supplier (RFQ).</span></li>
+                                <li class="flex items-start"><svg class="w-5 h-5 text-green-500 mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg><span>Kontrol Produksi Detail (WO & QC).</span></li>
+                                <li class="flex items-start"><svg class="w-5 h-5 text-green-500 mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg><span>Alur Penjualan End-to-End.</span></li>
+                                <li class="flex items-start"><svg class="w-5 h-5 text-green-500 mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg><span>Kontrol Persediaan Presisi.</span></li>
+                                <li class="flex items-start"><svg class="w-5 h-5 text-green-500 mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg><span>Pengelolaan Keuangan Advance.</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
 
         <!-- ===== FAQ Section ===== -->
@@ -755,7 +637,7 @@
                             <form action="mailto:pttridayaciptateknologi@gmail.com" method="POST" enctype="text/plain">
                                 <div class="mb-4"><label for="name" class="block text-gray-700 font-medium mb-2">Nama Lengkap</label><input type="text" id="name" name="Nama" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary/50 focus:border-primary transition" required></div>
                                 <div class="mb-4"><label for="email" class="block text-gray-700 font-medium mb-2">Alamat Email</label><input type="email" id="email" name="Email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary/50 focus:border-primary transition" required></div>
-                                <div class="mb-6"><label for="message" class="block text-gray-700 font-medium mb-2">Pesan</label><textarea id="message" name="Pesan" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary/50 focus:border-primary transition" required></textarea></div>
+                                <div class="mb-6"><label for="message" class="block text-gray-700 font-medium mb-2">Pesan</label><textarea id="message" name="Pesan" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary/50 focus-border-primary transition" required></textarea></div>
                                 <button type="submit" class="w-full bg-primary text-white font-bold py-4 px-6 rounded-lg hover:bg-primary-dark transition-colors transform hover:scale-105">Kirim Pesan</button>
                             </form>
                         </div>
@@ -794,6 +676,15 @@
             <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
         </svg>
     </button>
+    
+    <!-- Contact Us Button -->
+    <a href="#kontak" class="floating-btn contact-us-btn bg-primary text-white p-4 rounded-full flex items-center justify-center shadow-lg hover:bg-primary-dark transition-all transform hover:scale-110">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+        </svg>
+        <span class="ml-2 font-semibold hidden sm:block">Hubungi Kami</span>
+    </a>
+
 
     <!-- WhatsApp Button -->
     <a href="https://wa.me/6281315842172?text=Halo,%20saya%20tertarik%20dengan%20demo%20MyERP%20Plus." target="_blank" rel="noopener noreferrer" class="floating-btn whatsapp-btn bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-all transform hover:scale-110">
@@ -801,6 +692,15 @@
             <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
         </svg>
     </a>
+
+    <!-- Custom Alert Container -->
+    <div id="custom-alert" class="custom-alert-overlay hidden">
+        <div class="custom-alert-box">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+            <span>Content is protected!</span>
+        </div>
+    </div>
+
 
     <!-- AOS Script -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -810,6 +710,17 @@
     
     <!-- Custom JS for Interactivity -->
     <script>
+        // Right Click Protection
+        const customAlert = document.getElementById('custom-alert');
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+            customAlert.classList.remove('hidden');
+            setTimeout(() => {
+                customAlert.classList.add('hidden');
+            }, 2000);
+        });
+
+
         // Mobile Menu
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
@@ -839,3 +750,4 @@
 
 </body>
 </html>
+

@@ -476,7 +476,8 @@
               <li>Sales Order (SO) & Delivery Order (DO)</li>
               <li>Produksi lanjutan dengan BOM</li>
               <li>Kas Masuk, Kas Keluar, Bank Masuk, Bank Keluar</li>
-              <li>Manajemen multi gudang</li>
+              <li>Warehouse Inventory</li>
+              <li>3 User & Multi-gudang</li>  
             </ul>
           </div>
         </div>
@@ -498,10 +499,12 @@
           </ul>
         </div>
 
-        <p class="mt-6 text-2xl font-bold text-gray-900">Diskusi Dengan Kami</p>
-        <p class="text-xs text-gray-500">Harga disesuaikan kebutuhan bisnis</p>
+        <p class="mt-6 text-sm line-through text-gray-400">Rp 1.200,000</p>
+        <p class="text-sm text-blue-600 font-medium">diskon 10%</p>
+        <p class="text-2xl font-bold text-gray-900">Rp 1.080,000 <span class="text-base font-normal">/bulan</span></p>
+        <p class="text-xs text-gray-500">*dibayar per tahun</p>
 
-        <a href="https://wa.me/6281234567890" target="_blank"
+        <a href="https://wa.me/6281315842172" target="_blank"
            class="mt-6 block w-full rounded-xl bg-red-600 px-4 py-3 text-center text-white font-semibold hover:bg-red-700">
           WhatsApp Sales
         </a>
@@ -520,6 +523,7 @@
               <li>Produksi lengkap (QC Bahan, Assembly / Disassembly)</li>
               <li>Stok Opname, Penyesuaian Harga Jual, Inventory Control</li>
               <li>Giro & Jurnal Penyesuaian</li>
+              <li>5 user & Multi-gudang</li>  
             </ul>
           </div>
         </div>
@@ -537,10 +541,10 @@
       const isActive = btn.classList.contains("active");
 
       // Tutup semua
-      toggles.forEach(b => {
-        b.classList.remove("active");
-        b.querySelector(".arrow").textContent = "▲";
-        b.nextElementSibling.style.display = "none";
+      //toggles.forEach(b => {
+        //b.classList.remove("active");
+        //b.querySelector(".arrow").textContent = "▲";
+        //b.nextElementSibling.style.display = "none";
       });
 
       // Buka kembali jika belum aktif
@@ -833,5 +837,6 @@
 
 </body>
 </html>
+
 
 

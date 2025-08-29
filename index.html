@@ -416,151 +416,160 @@
           WhatsApp Sales
         </a>
 
-        <!-- Dropdown Fitur Starter -->
-        <div class="mt-4">
-          <button class="dropdown-toggle w-full flex justify-between items-center px-4 py-2 border rounded-lg text-left font-medium bg-gray-50">
-            Fitur utama paket Starter
-            <span class="arrow">▲</span>
-          </button>
-          <div class="dropdown-content mt-2 space-y-2 text-sm text-gray-700">
-            <ul class="list-disc pl-5 space-y-1">
-              <li>Faktur Pembelian & Penjualan</li>
-              <li>Retur Beli & Retur Jual</li>
-              <li>Pembayaran Hutang & Penerimaan Piutang</li>
-              <li>Produksi dasar (Formula Produksi & Proses Produksi)</li>
-              <li>Mutasi & Penyesuaian Stok</li>
-              <li>Kas / Bank & Jurnal Umum</li>
-            </ul>
-          </div>
-        </div>
+       <!-- ===== Comparison Section ===== -->
+<section id="perbandingan" class="py-24 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="text-center mb-10">
+      <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+        Perbandingan Paket: Starter vs Pro vs Enterprise
+      </h2>
+      <p class="mt-3 text-gray-600">Ringkasan fitur per modul sesuai flowchart MyERP Plus.</p>
+    </div>
+
+    <!-- Desktop: Table -->
+    <div class="hidden md:block overflow-x-auto rounded-2xl border bg-white shadow-sm">
+      <table class="min-w-full text-sm">
+        <thead class="bg-gray-100 sticky top-0 z-10">
+          <tr>
+            <th class="w-56 px-6 py-4 text-left font-semibold text-gray-700">Modul</th>
+            <th class="px-6 py-4 text-left font-semibold text-gray-700">Starter (Simple)</th>
+            <th class="px-6 py-4 text-left font-semibold text-gray-700">Pro (Medium)</th>
+            <th class="px-6 py-4 text-left font-semibold text-gray-700">Enterprise</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-100">
+          <!-- Jumlah User -->
+          <tr class="bg-yellow-50">
+            <td class="px-6 py-5 font-medium text-gray-900">Jumlah User</td>
+            <td class="px-6 py-5 text-gray-700">1 – 3 User</td>
+            <td class="px-6 py-5 text-gray-700">5 – 10 User</td>
+            <td class="px-6 py-5 text-gray-700">Unlimited User</td>
+          </tr>
+
+          <!-- Purchasing -->
+          <tr>
+            <td class="align-top px-6 py-5 font-medium text-gray-900">Purchasing</td>
+            <td class="align-top px-6 py-5 text-gray-700">
+              <ul class="list-disc pl-5 space-y-1">
+                <li>Pembelian (RI)</li>
+                <li>Retur Beli (PRT)</li>
+                <li>Bayar Hutang (VP)</li>
+              </ul>
+            </td>
+            <td class="align-top px-6 py-5 text-gray-700">
+              <ul class="list-disc pl-5 space-y-1">
+                <li>Purchase Order (PO)</li>
+                <li>Good Receipt Note (GRN)</li>
+                <li>Receive Invoice (RI)</li>
+                <li>Purchase Return (PRT)</li>
+                <li>Vendor Payment (VP)</li>
+              </ul>
+            </td>
+            <td class="align-top px-6 py-5 text-gray-700">
+              <ul class="list-disc pl-5 space-y-1">
+                <li>Purchase Request (PR), RFQ (RQ), Bidding (BS)</li>
+                <li>Purchase Order (PO), Advance Purchase (AP)</li>
+                <li>GRN, RI, Quality Control</li>
+                <li>Purchase Return (PRT), Delivery Note Return (DNR)</li>
+                <li>Vendor Payment Plan (VPP), Vendor Payment (VP)</li>
+              </ul>
+            </td>
+          </tr>
+
+          <!-- Production -->
+          <tr class="bg-gray-50/40">
+            <td class="align-top px-6 py-5 font-medium text-gray-900">Production</td>
+            <td class="align-top px-6 py-5 text-gray-700">
+              Formula Produksi (PF), Produksi (PD)
+            </td>
+            <td class="align-top px-6 py-5 text-gray-700">
+              Bill of Material (BOM), Production (PD)
+            </td>
+            <td class="align-top px-6 py-5 text-gray-700">
+              PDR, WO, BOM, PD, Material Release (MRS), Return (MRN), QC
+            </td>
+          </tr>
+
+          <!-- Sales & Distribution -->
+          <tr>
+            <td class="align-top px-6 py-5 font-medium text-gray-900">Sales & Distribution</td>
+            <td class="align-top px-6 py-5 text-gray-700">
+              Penjualan (SI), Retur Jual (SR), Terima Piutang (PV)
+            </td>
+            <td class="align-top px-6 py-5 text-gray-700">
+              SO, DO, SI, SR, Payment Receipt (PV)
+            </td>
+            <td class="align-top px-6 py-5 text-gray-700">
+              SQ, SO, DO, DR, PL, PI, SI, SR, RNR, AS, PV, IC
+            </td>
+          </tr>
+
+          <!-- Inventory & Warehouse -->
+          <tr class="bg-gray-50/40">
+            <td class="align-top px-6 py-5 font-medium text-gray-900">Inventory & Warehouse</td>
+            <td class="align-top px-6 py-5 text-gray-700">Mutasi (TS), Penyesuaian (SA)</td>
+            <td class="align-top px-6 py-5 text-gray-700">Transfer (TS), Adjustment (SA)</td>
+            <td class="align-top px-6 py-5 text-gray-700">
+              TR, TS, RS, SA, Stock Opname (SP), Price Adj. (PA)
+            </td>
+          </tr>
+
+          <!-- Finance -->
+          <tr>
+            <td class="align-top px-6 py-5 font-medium text-gray-900">Finance & Accounting</td>
+            <td class="align-top px-6 py-5 text-gray-700">Jurnal Umum, Kas/Bank</td>
+            <td class="align-top px-6 py-5 text-gray-700">CR, CD, RM, SM, GJ</td>
+            <td class="align-top px-6 py-5 text-gray-700">CR, CD, RM, SM, RG, SG, AJ, GJ</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Mobile: Cards -->
+    <div class="md:hidden space-y-6">
+      <!-- Starter -->
+      <div class="rounded-2xl border bg-white p-6 shadow-sm">
+        <h3 class="text-lg font-semibold text-gray-900">Starter (Simple)</h3>
+        <p class="mt-1 text-sm text-gray-600">Jumlah User: <span class="font-medium text-gray-900">1 – 3</span></p>
+        <ul class="mt-3 space-y-2 text-gray-700 list-disc pl-5">
+          <li>Purchasing: RI, PRT, VP</li>
+          <li>Production: PF, PD</li>
+          <li>Sales: SI, SR, PV</li>
+          <li>Inventory: TS, SA</li>
+          <li>Finance: Jurnal Umum, Kas/Bank</li>
+        </ul>
       </div>
 
       <!-- Pro -->
-      <div class="rounded-2xl border-2 border-red-500 p-8 shadow-md hover:shadow-lg transition">
-        <h3 class="text-xl font-semibold text-gray-900">Paket Pro 
-          <span class="ml-2 text-xs bg-red-600 text-white px-2 py-1 rounded">PALING POPULER</span>
-        </h3>
-        <p class="mt-2 text-gray-600">
-          Cocok untuk bisnis menengah dengan proses pembelian, penjualan, dan produksi yang lebih kompleks.
-        </p>
-
-        <div class="mt-4 bg-red-50 p-4 rounded-lg">
-          <h4 class="font-medium">Bisnis dengan kebutuhan:</h4>
-          <ul class="mt-2 list-disc pl-5 text-sm text-gray-700 space-y-1">
-            <li>Multi gudang</li>
-            <li>Manajemen produk kompleks</li>
-            <li>Kontrol transaksi yang lebih detail</li>
-          </ul>
-        </div>
-
-        <p class="mt-6 text-sm line-through text-gray-400">Rp 899,000</p>
-        <p class="text-sm text-blue-600 font-medium">diskon 10%</p>
-        <p class="text-2xl font-bold text-gray-900">Rp 809,100 <span class="text-base font-normal">/bulan</span></p>
-        <p class="text-xs text-gray-500">*dibayar per tahun</p>
-
-        <a href="https://wa.me/6281234567890" target="_blank"
-           class="mt-6 block w-full rounded-xl bg-red-600 px-4 py-3 text-center text-white font-semibold hover:bg-red-700">
-          WhatsApp Sales
-        </a>
-
-        <!-- Dropdown Fitur Pro -->
-        <div class="mt-4">
-          <button class="dropdown-toggle w-full flex justify-between items-center px-4 py-2 border rounded-lg text-left font-medium bg-gray-50">
-            Fitur utama paket Pro
-            <span class="arrow">▲</span>
-          </button>
-          <div class="dropdown-content mt-2 space-y-2 text-sm text-gray-700">
-            <ul class="list-disc pl-5 space-y-1">
-              <li>Purchase Order & Penerimaan Barang</li>
-              <li>Bill of Material (BOM) untuk Produksi</li>
-              <li>Sales Order (SO) & Delivery Order (DO)</li>
-              <li>Produksi lanjutan dengan BOM</li>
-              <li>Kas Masuk, Kas Keluar, Bank Masuk, Bank Keluar</li>
-              <li>Warehouse Inventory</li>
-              <li>3 User & Multi-gudang</li>  
-            </ul>
-          </div>
-        </div>
+      <div class="rounded-2xl border-2 border-red-500 bg-white p-6 shadow-sm">
+        <h3 class="text-lg font-semibold text-gray-900">Pro (Medium) <span class="ml-2 text-[10px] bg-red-600 text-white px-2 py-0.5 rounded-full">Populer</span></h3>
+        <p class="mt-1 text-sm text-gray-600">Jumlah User: <span class="font-medium text-gray-900">5 – 10</span></p>
+        <ul class="mt-3 space-y-2 text-gray-700 list-disc pl-5">
+          <li>Purchasing: PO, GRN, RI, PRT, VP</li>
+          <li>Production: BOM, PD</li>
+          <li>Sales: SO, DO, SI, SR, PV</li>
+          <li>Inventory: TS, SA</li>
+          <li>Finance: CR, CD, RM, SM, GJ</li>
+        </ul>
       </div>
 
       <!-- Enterprise -->
-      <div class="rounded-2xl border p-8 shadow-sm hover:shadow-lg transition">
-        <h3 class="text-xl font-semibold text-gray-900">Paket Enterprise</h3>
-        <p class="mt-2 text-gray-600">
-          Cocok untuk perusahaan besar yang membutuhkan kontrol penuh & otomatisasi end-to-end.
-        </p>
-
-        <div class="mt-4 bg-red-50 p-4 rounded-lg">
-          <h4 class="font-medium">Bisnis dengan kebutuhan:</h4>
-          <ul class="mt-2 list-disc pl-5 text-sm text-gray-700 space-y-1">
-            <li>Manajemen produksi advanced</li>
-            <li>Analisa bisnis yang lebih dalam</li>
-            <li>Multi cabang & gudang besar</li>
-          </ul>
-        </div>
-
-        <p class="mt-6 text-sm line-through text-gray-400">Rp 1.200,000</p>
-        <p class="text-sm text-blue-600 font-medium">diskon 10%</p>
-        <p class="text-2xl font-bold text-gray-900">Rp 1.080,000 <span class="text-base font-normal">/bulan</span></p>
-        <p class="text-xs text-gray-500">*dibayar per tahun</p>
-
-        <a href="https://wa.me/6281315842172" target="_blank"
-           class="mt-6 block w-full rounded-xl bg-red-600 px-4 py-3 text-center text-white font-semibold hover:bg-red-700">
-          WhatsApp Sales
-        </a>
-
-        <!-- Dropdown Fitur Enterprise -->
-        <div class="mt-4">
-          <button class="dropdown-toggle w-full flex justify-between items-center px-4 py-2 border rounded-lg text-left font-medium bg-gray-50">
-            Fitur utama paket Enterprise
-            <span class="arrow">▲</span>
-          </button>
-          <div class="dropdown-content mt-2 space-y-2 text-sm text-gray-700">
-            <ul class="list-disc pl-5 space-y-1">
-              <li>Request for Quotation & Bidding Supplier</li>
-              <li>Work Order & Quality Control Produksi</li>
-              <li>Sales Quotation, Proforma Invoice, Packing List</li>
-              <li>Produksi lengkap (QC Bahan, Assembly / Disassembly)</li>
-              <li>Stok Opname, Penyesuaian Harga Jual, Inventory Control</li>
-              <li>Giro & Jurnal Penyesuaian</li>
-              <li>5 user & Multi-gudang</li>  
-            </ul>
-          </div>
-        </div>
+      <div class="rounded-2xl border bg-white p-6 shadow-sm">
+        <h3 class="text-lg font-semibold text-gray-900">Enterprise</h3>
+        <p class="mt-1 text-sm text-gray-600">Jumlah User: <span class="font-medium text-gray-900">Unlimited</span></p>
+        <ul class="mt-3 space-y-2 text-gray-700 list-disc pl-5">
+          <li>Purchasing: PR, RQ, BS, PO, AP, GRN, RI, QC, PRT, DNR, VPP, VP</li>
+          <li>Production: PDR, WO, BOM, PD, MRS, MRN, QC</li>
+          <li>Sales: SQ, SO, DO, DR, PL, PI, SI, SR, RNR, AS, PV, IC</li>
+          <li>Inventory: TR, TS, RS, SA, SP, PA</li>
+          <li>Finance: CR, CD, RM, SM, RG, SG, AJ, GJ</li>
+        </ul>
       </div>
-
     </div>
+
+    <p class="mt-6 text-xs text-gray-500">Catatan: Singkatan mengikuti flowchart (mis. PO = Purchase Order, GRN = Good Receipt Note, dll).</p>
   </div>
 </section>
-
-<script>
-  const toggles = document.querySelectorAll(".dropdown-toggle");
-
-  toggles.forEach(btn => {
-    btn.addEventListener("click", () => {
-      const isActive = btn.classList.contains("active");
-
-      // Tutup semua
-      //toggles.forEach(b => {
-        //b.classList.remove("active");
-        //b.querySelector(".arrow").textContent = "▲";
-        //b.nextElementSibling.style.display = "none";
-      });
-
-      // Buka kembali jika belum aktif
-      if (!isActive) {
-        btn.classList.add("active");
-        btn.querySelector(".arrow").textContent = "▼";
-        btn.nextElementSibling.style.display = "block";
-      }
-    });
-
-    // Default open saat load
-    btn.classList.add("active");
-    btn.querySelector(".arrow").textContent = "▼";
-    btn.nextElementSibling.style.display = "block";
-  });
-</script>
 
 
         <!-- ===== FAQ Section ===== -->
@@ -837,6 +846,7 @@
 
 </body>
 </html>
+
 
 
 

@@ -123,47 +123,86 @@
 <body class="bg-white font-sans text-gray-700 antialiased" x-data="{}">
 
     <!-- ===== Header / Navbar ===== -->
-    <header id="header" class="bg-white/95 backdrop-blur-lg sticky top-0 left-0 right-0 z-50 transition-all duration-300 shadow-md">
-        <div class="container mx-auto px-6 py-4">
-            <div class="flex justify-between items-center">
-                <a href="index.html" class="text-2xl font-bold text-secondary flex items-center">
-                    <svg class="w-9 h-9 mr-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 2L4 6.5V15.5L12 20L20 15.5V6.5L12 2Z" fill="#DC2626"/>
-                        <path d="M12 20V11L4 6.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M12 11L20 6.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M16.5 9.25L7.5 14.25" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    <span>MyERP <span class="text-primary">Plus</span></span>
-                </a>
-                <nav class="hidden lg:flex items-center space-x-8">
-                    <a href="#solusi" class="text-gray-600 hover:text-primary transition-colors font-semibold">Solusi Industri</a>
-                    <a href="#fitur" class="text-gray-600 hover:text-primary transition-colors font-semibold">Fitur</a>
-                    <a href="#harga" class="text-gray-600 hover:text-primary transition-colors font-semibold">Harga</a>
-                    <a href="#faq" class="text-gray-600 hover:text-primary transition-colors font-semibold">FAQ</a>
-                    <a href="#blog" class="text-gray-600 hover:text-primary transition-colors font-semibold">Blog</a>
-                </nav>
-                <a href="#kontak" class="hidden lg:inline-block bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-dark transition-all duration-300 transform hover:scale-105">
-                    Coba Gratis
-                </a>
-                <button id="mobile-menu-button" class="lg:hidden p-2 rounded-md text-gray-800 hover:bg-gray-100 focus:outline-none">
-                    <svg id="menu-open-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-                    <svg id="menu-close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-                </button>
-            </div>
-        </div>
-        <div id="mobile-menu" class="hidden lg:hidden px-6 pb-4 space-y-2">
-            <a href="#solusi" class="block py-2 text-gray-600 hover:text-primary">Solusi Industri</a>
-            <a href="#fitur" class="block py-2 text-gray-600 hover:text-primary">Fitur</a>
-            <a href="#harga" class="block py-2 text-gray-600 hover:text-primary">Harga</a>
-            <a href="#faq" class="block py-2 text-gray-600 hover:text-primary">FAQ</a>
-            <a href="#blog" class="block py-2 text-gray-600 hover:text-primary">Blog</a>
-            <a href="#kontak" class="block bg-primary text-white text-center mt-2 px-5 py-3 rounded-lg font-semibold hover:bg-primary-dark">
-                Coba Gratis
-            </a>
-        </div>
-    </header>
+<header id="header" class="bg-white/95 backdrop-blur-lg sticky top-0 left-0 right-0 z-50 transition-all duration-300 shadow-md">
+  <div class="container mx-auto px-6 py-4">
+    <div class="flex justify-between items-center">
+      
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center" aria-label="MyERP Plus Homepage">
+        <img src="/images/logo.png" alt="MyERP Plus" 
+             class="h-8 w-auto sm:h-10 md:h-12 lg:h-14 xl:h-16">
+      </a>
 
-    <main>
+      <!-- Desktop Nav -->
+      <nav class="hidden lg:flex items-center space-x-8" role="navigation" aria-label="Main Navigation">
+        <a href="#solusi" class="text-gray-600 hover:text-primary transition-colors font-semibold">Solusi Industri</a>
+        <a href="#fitur" class="text-gray-600 hover:text-primary transition-colors font-semibold">Fitur</a>
+        <a href="#harga" class="text-gray-600 hover:text-primary transition-colors font-semibold">Harga</a>
+        <a href="#faq" class="text-gray-600 hover:text-primary transition-colors font-semibold">FAQ</a>
+        <a href="#blog" class="text-gray-600 hover:text-primary transition-colors font-semibold">Blog</a>
+      </nav>
+
+      <!-- CTA -->
+      <a href="#kontak" class="hidden lg:inline-block bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-dark transition-all duration-300 transform hover:scale-105">
+        Coba Gratis
+      </a>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-button"
+              aria-controls="mobile-menu"
+              aria-expanded="false"
+              aria-label="Toggle mobile menu"
+              class="lg:hidden p-2 rounded-md text-gray-800 hover:bg-gray-100 focus:outline-none">
+        <!-- Icon Open -->
+        <svg id="menu-open-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+        <!-- Icon Close -->
+        <svg id="menu-close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden lg:hidden px-6 pb-4 space-y-2 transition-all duration-300 ease-in-out">
+    <a href="#solusi" class="block py-2 text-gray-600 hover:text-primary">Solusi Industri</a>
+    <a href="#fitur" class="block py-2 text-gray-600 hover:text-primary">Fitur</a>
+    <a href="#harga" class="block py-2 text-gray-600 hover:text-primary">Harga</a>
+    <a href="#faq" class="block py-2 text-gray-600 hover:text-primary">FAQ</a>
+    <a href="#blog" class="block py-2 text-gray-600 hover:text-primary">Blog</a>
+    <a href="#kontak" class="block bg-primary text-white text-center mt-2 px-5 py-3 rounded-lg font-semibold hover:bg-primary-dark">
+      Coba Gratis
+    </a>
+  </div>
+</header>
+
+<!-- ===== JavaScript Toggle Mobile Menu ===== -->
+<script>
+  const menuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const menuOpenIcon = document.getElementById('menu-open-icon');
+  const menuCloseIcon = document.getElementById('menu-close-icon');
+
+  menuButton.addEventListener('click', () => {
+    const isOpen = mobileMenu.classList.contains('hidden');
+    
+    // Toggle menu
+    if (isOpen) {
+      mobileMenu.classList.remove('hidden');
+      menuOpenIcon.classList.add('hidden');
+      menuCloseIcon.classList.remove('hidden');
+      menuButton.setAttribute('aria-expanded', 'true');
+    } else {
+      mobileMenu.classList.add('hidden');
+      menuOpenIcon.classList.remove('hidden');
+      menuCloseIcon.classList.add('hidden');
+      menuButton.setAttribute('aria-expanded', 'false');
+    }
+  });
+</script>
+
         <!-- ===== Hero Section ===== -->
         <section id="beranda" class="relative hero-bg">
             <video autoplay muted loop id="bg-video">
@@ -819,4 +858,5 @@
 
 </body>
 </html>
+
 
